@@ -1,17 +1,24 @@
+using View.Model;
+
 namespace View
 {
     public partial class Form1 : Form
     {
         private string datoOrigen = string.Empty;
         private string datoDestino = string.Empty;
-        private string datoFechaO = string.Empty;
-        private string datoFechaD = string.Empty;
-        
+        private string fechaIda = string.Empty;
+        private string fechaVuelta = string.Empty;
+        private Form2 formdatos;
+
+
         public Form1()
         {
             InitializeComponent();
             var fecha = DateTime.Now.Date;
             label3.Text = fecha.ToString();
+            formdatos = new Form2();
+            formdatos.Hide();
+            labeldatos1.Hide();
         }
 
         private void btSelectVuelta_Click(object sender, EventArgs e)
@@ -21,7 +28,7 @@ namespace View
                 monthCalendarVuelta.Hide();
                 monthCalendarVuelta.Enabled = false;
                 btSelectVuelta.Text = "Seleccionar vuelta";
-                datoFechaD = string.Empty;
+                fechaVuelta = string.Empty;
                 label4.Text = string.Empty;
             }
             else
@@ -56,15 +63,15 @@ namespace View
         {
             monthCalendarVuelta.MinDate = monthCalendarIda.SelectionRange.Start;
             label3.Text = monthCalendarIda.SelectionEnd.ToString();
-            datoFechaO = monthCalendarIda.SelectionEnd.ToString() ?? string.Empty;
+            fechaIda = monthCalendarIda.SelectionEnd.ToString() ?? string.Empty;
             label4.Text = string.Empty;
-            datoFechaD = string.Empty;
+            fechaVuelta = string.Empty;
         }
 
         private void monthCalendarVuelta_DateChanged(object sender, DateRangeEventArgs e)
         {
             label4.Text = monthCalendarVuelta.SelectionEnd.ToString();
-            datoFechaD = monthCalendarIda.SelectionEnd.ToString() ?? string.Empty;
+            fechaVuelta = monthCalendarIda.SelectionEnd.ToString() ?? string.Empty;
         }
 
         private void comboBoxDestino_SelectedIndexChanged(object sender, EventArgs e)
@@ -100,7 +107,19 @@ namespace View
             {
                 if (Message1())
                 {
-                    MessageBox.Show(datoOrigen + " a "+ datoDestino + Environment.NewLine+ "del " + datoFechaO + " al " + datoFechaD, "Reservado");
+                    formdatos.ClearDatos();
+                    //MessageBox.Show(datoOrigen + " a "+ datoDestino + Environment.NewLine+ "del " + fechaIda + " al " + fechaVuelta, "Reservado");
+                    formdatos.origen = datoOrigen;
+                    formdatos.destino = datoDestino;
+                    formdatos.fechaIda = fechaIda;
+                    formdatos.fechaVuelta = fechaVuelta;
+                    formdatos.Actualizar();
+                    formdatos.CheckearCampos();
+                    formdatos.ShowDialog();
+                    labeldatos1.Show();
+
+                    labeldatos2.Text = formdatos.Damepersona().MostrarPersona();
+
                 }
                 else
                 {
@@ -113,12 +132,18 @@ namespace View
             }
             
         }
-        
+        private Billete DameBillete()
+        {
+            return new Billete
+            {
+
+            } ?? new Billete();
+        }
         private bool Checkear()
         {
-            if(datoFechaO != string.Empty && datoOrigen != string.Empty && datoDestino != string.Empty)
+            if(fechaIda != string.Empty && datoOrigen != string.Empty && datoDestino != string.Empty)
             {
-                if(monthCalendarVuelta.Enabled && datoFechaD == string.Empty)
+                if(monthCalendarVuelta.Enabled && fechaVuelta == string.Empty)
                 {
                     return false;
                 }

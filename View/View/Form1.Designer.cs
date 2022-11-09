@@ -44,11 +44,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.labeldatos1 = new System.Windows.Forms.Label();
+            this.labeldatos2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // monthCalendarIda
             // 
-            this.monthCalendarIda.Location = new System.Drawing.Point(54, 149);
+            this.monthCalendarIda.Location = new System.Drawing.Point(45, 78);
             this.monthCalendarIda.MinDate = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
             this.monthCalendarIda.Name = "monthCalendarIda";
             this.monthCalendarIda.TabIndex = 0;
@@ -56,7 +58,7 @@
             // 
             // monthCalendarVuelta
             // 
-            this.monthCalendarVuelta.Location = new System.Drawing.Point(468, 149);
+            this.monthCalendarVuelta.Location = new System.Drawing.Point(278, 78);
             this.monthCalendarVuelta.MinDate = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
             this.monthCalendarVuelta.Name = "monthCalendarVuelta";
             this.monthCalendarVuelta.TabIndex = 1;
@@ -64,11 +66,11 @@
             // 
             // btComprar
             // 
-            this.btComprar.Location = new System.Drawing.Point(250, 375);
+            this.btComprar.Location = new System.Drawing.Point(45, 301);
             this.btComprar.Name = "btComprar";
-            this.btComprar.Size = new System.Drawing.Size(220, 63);
+            this.btComprar.Size = new System.Drawing.Size(425, 63);
             this.btComprar.TabIndex = 2;
-            this.btComprar.Text = "Comprar billetes";
+            this.btComprar.Text = "Comprar billete";
             this.btComprar.UseVisualStyleBackColor = true;
             this.btComprar.Click += new System.EventHandler(this.btComprar_Click);
             // 
@@ -140,7 +142,7 @@
             // labelVueloOrigen
             // 
             this.labelVueloOrigen.AutoSize = true;
-            this.labelVueloOrigen.Location = new System.Drawing.Point(54, 320);
+            this.labelVueloOrigen.Location = new System.Drawing.Point(45, 249);
             this.labelVueloOrigen.Name = "labelVueloOrigen";
             this.labelVueloOrigen.Size = new System.Drawing.Size(165, 15);
             this.labelVueloOrigen.TabIndex = 8;
@@ -149,7 +151,7 @@
             // labelVueloDestino
             // 
             this.labelVueloDestino.AutoSize = true;
-            this.labelVueloDestino.Location = new System.Drawing.Point(49, 335);
+            this.labelVueloDestino.Location = new System.Drawing.Point(40, 264);
             this.labelVueloDestino.Name = "labelVueloDestino";
             this.labelVueloDestino.Size = new System.Drawing.Size(170, 15);
             this.labelVueloDestino.TabIndex = 9;
@@ -158,7 +160,7 @@
             // labelFechaIda
             // 
             this.labelFechaIda.AutoSize = true;
-            this.labelFechaIda.Location = new System.Drawing.Point(484, 320);
+            this.labelFechaIda.Location = new System.Drawing.Point(294, 249);
             this.labelFechaIda.Name = "labelFechaIda";
             this.labelFechaIda.Size = new System.Drawing.Size(99, 15);
             this.labelFechaIda.TabIndex = 10;
@@ -167,7 +169,7 @@
             // labelFechaVuelta
             // 
             this.labelFechaVuelta.AutoSize = true;
-            this.labelFechaVuelta.Location = new System.Drawing.Point(468, 338);
+            this.labelFechaVuelta.Location = new System.Drawing.Point(278, 267);
             this.labelFechaVuelta.Name = "labelFechaVuelta";
             this.labelFechaVuelta.Size = new System.Drawing.Size(115, 15);
             this.labelFechaVuelta.TabIndex = 11;
@@ -176,7 +178,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(225, 320);
+            this.label1.Location = new System.Drawing.Point(216, 249);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 12;
@@ -184,7 +186,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 335);
+            this.label2.Location = new System.Drawing.Point(216, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 13;
@@ -192,7 +194,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(589, 320);
+            this.label3.Location = new System.Drawing.Point(399, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 14;
@@ -200,16 +202,35 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(589, 338);
+            this.label4.Location = new System.Drawing.Point(399, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 15);
             this.label4.TabIndex = 15;
+            // 
+            // labeldatos1
+            // 
+            this.labeldatos1.AutoSize = true;
+            this.labeldatos1.Location = new System.Drawing.Point(45, 382);
+            this.labeldatos1.Name = "labeldatos1";
+            this.labeldatos1.Size = new System.Drawing.Size(180, 15);
+            this.labeldatos1.TabIndex = 16;
+            this.labeldatos1.Text = "Compra realizada con éxito para:";
+            // 
+            // labeldatos2
+            // 
+            this.labeldatos2.AutoSize = true;
+            this.labeldatos2.Location = new System.Drawing.Point(231, 382);
+            this.labeldatos2.Name = "labeldatos2";
+            this.labeldatos2.Size = new System.Drawing.Size(0, 15);
+            this.labeldatos2.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(519, 527);
+            this.Controls.Add(this.labeldatos2);
+            this.Controls.Add(this.labeldatos1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -251,5 +272,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Label labeldatos1;
+        private Label labeldatos2;
     }
 }
