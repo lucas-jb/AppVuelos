@@ -8,17 +8,22 @@ namespace View.Model
 {
     public class Billete
     {
-        public Persona pasajero { get; set; }
+        public Persona Pasajero { get; set; }
         public Vuelo Ida { get; set; }
-        public Vuelo Vuelta { get; set; }
+        public Vuelo? Vuelta { get; set; } = null;
 
         public string MostrarBillete()
         {
+            if(Vuelta == null)
+            {
             return
-                "Datos pasajero: " + pasajero.MostrarPersona() +
-                "Vuelo ida: " + Ida.MostrarVuelo() + Environment.NewLine +
-                "Vuelo vuelta: " + Vuelta.MostrarVuelo();
-
+                "Datos pasajero: " + Environment.NewLine + Pasajero.MostrarPersona() +
+                "Vuelo ida: " + Environment.NewLine + Ida.MostrarVuelo();
+            }
+            return
+                "Datos pasajero: " + Environment.NewLine + Pasajero.MostrarPersona() +
+                "Vuelo ida: " + Environment.NewLine + Ida.MostrarVuelo() +
+                "Vuelo vuelta: " + Environment.NewLine + Vuelta.MostrarVuelo();
         }
     }
 }

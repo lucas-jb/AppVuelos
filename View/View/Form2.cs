@@ -13,10 +13,9 @@ namespace View
 {
     public partial class Form2 : Form
     {
-        public string origen { get; set; }
-        public string destino { get; set; }
-        public string fechaIda { get; set; }
-        public string fechaVuelta { get; set; }
+        public Vuelo? vueloIda = null;
+        public Vuelo? vueloVuelta = null;
+
 
         public Form2()
         {
@@ -24,10 +23,27 @@ namespace View
         }
         public void Actualizar()
         {
-            this.textBoxOrigen.Text = origen;
-            this.textBoxDestino.Text = destino;
-            this.textBoxFI.Text = fechaIda;
-            this.textBoxFV.Text = fechaVuelta;
+            if(vueloIda != null)
+            {
+                this.textBoxOrigen.Text = vueloIda.Origen;
+                this.textBoxDestino.Text = vueloIda.Destino;
+                this.textBoxFI.Text = vueloIda.Fecha.ToString();
+            }
+            else
+            {
+                this.textBoxOrigen.Text = string.Empty;
+                this.textBoxDestino.Text = string.Empty;
+                this.textBoxFI.Text = string.Empty;
+            }
+            if(vueloVuelta != null)
+            {
+                this.textBoxFV.Text = vueloVuelta.Fecha.ToString();
+            }
+            else
+            {
+                this.textBoxFV.Text = string.Empty;
+            }
+            
         }
         public void ClearDatos()
         {
@@ -54,6 +70,19 @@ namespace View
                 Dni = textBoxDNI.Text
 
             } ?? new Persona();
+        }
+        public Billete GenerarBillete()
+        {
+            if (vueloIda != null)
+            {
+                return new Billete
+                {
+                    Pasajero = Damepersona(),
+                    Ida = vueloIda,
+                    Vuelta = vueloVuelta
+                };
+            }
+            return new Billete();
         }
         public bool RellenadoCheck()
         {
@@ -131,7 +160,6 @@ namespace View
             {
                 MessageBox.Show("Faltan datos", "Cancelado");
             }
-
         }
     }
 }

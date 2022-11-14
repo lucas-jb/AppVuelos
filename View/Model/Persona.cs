@@ -19,7 +19,7 @@ namespace View.Model
                 "Nombre: " + Nombre + Environment.NewLine +
                 "Apellidos: " + Apellidos + Environment.NewLine +
                 "Direccion: " + Direccion + Environment.NewLine +
-                "Dni: " + Dni;
+                "Dni: " + Dni + Environment.NewLine;
         }
         
     }

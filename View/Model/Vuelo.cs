@@ -17,7 +17,7 @@ namespace View.Model
             return
                 "Origen: " + Origen + Environment.NewLine +
                 "Destino: " + Destino + Environment.NewLine +
-                "Fecha: " + Fecha.ToString();
+                "Fecha: " + Fecha.ToString() + Environment.NewLine;
         }
     }
 }

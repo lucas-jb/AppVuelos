@@ -6,8 +6,8 @@ namespace View
     {
         private string datoOrigen = string.Empty;
         private string datoDestino = string.Empty;
-        private string fechaIda = string.Empty;
-        private string fechaVuelta = string.Empty;
+        private DateTime? fechaIda = null;
+        private DateTime? fechaVuelta = null;
         private Form2 formdatos;
 
 
@@ -28,7 +28,7 @@ namespace View
                 monthCalendarVuelta.Hide();
                 monthCalendarVuelta.Enabled = false;
                 btSelectVuelta.Text = "Seleccionar vuelta";
-                fechaVuelta = string.Empty;
+                fechaVuelta = null;
                 label4.Text = string.Empty;
             }
             else
@@ -63,15 +63,15 @@ namespace View
         {
             monthCalendarVuelta.MinDate = monthCalendarIda.SelectionRange.Start;
             label3.Text = monthCalendarIda.SelectionEnd.ToString();
-            fechaIda = monthCalendarIda.SelectionEnd.ToString() ?? string.Empty;
+            fechaIda = monthCalendarIda.SelectionEnd;
             label4.Text = string.Empty;
-            fechaVuelta = string.Empty;
+            fechaVuelta = null;
         }
 
         private void monthCalendarVuelta_DateChanged(object sender, DateRangeEventArgs e)
         {
             label4.Text = monthCalendarVuelta.SelectionEnd.ToString();
-            fechaVuelta = monthCalendarIda.SelectionEnd.ToString() ?? string.Empty;
+            fechaVuelta = monthCalendarIda.SelectionEnd;
         }
 
         private void comboBoxDestino_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,16 +109,32 @@ namespace View
                 {
                     formdatos.ClearDatos();
                     //MessageBox.Show(datoOrigen + " a "+ datoDestino + Environment.NewLine+ "del " + fechaIda + " al " + fechaVuelta, "Reservado");
-                    formdatos.origen = datoOrigen;
-                    formdatos.destino = datoDestino;
-                    formdatos.fechaIda = fechaIda;
-                    formdatos.fechaVuelta = fechaVuelta;
+                    if (fechaIda != null)
+                    {
+                        var vueloIda = new Vuelo()
+                        {
+                            Origen = datoOrigen,
+                            Destino = datoDestino,
+                            Fecha = fechaIda ?? DateTime.Now
+                        };
+                        formdatos.vueloIda = vueloIda;
+                    }
+                    if (fechaVuelta != null)
+                    {
+                        var vueloVuelta = new Vuelo()
+                        {
+                            Origen = datoDestino,
+                            Destino = datoOrigen,
+                            Fecha = fechaVuelta ?? DateTime.Now
+                        };
+                        formdatos.vueloVuelta = vueloVuelta;
+                    }
                     formdatos.Actualizar();
                     formdatos.CheckearCampos();
                     formdatos.ShowDialog();
                     labeldatos1.Show();
 
-                    labeldatos2.Text = formdatos.Damepersona().MostrarPersona();
+                    labeldatos2.Text = formdatos.GenerarBillete().MostrarBillete();
 
                 }
                 else
@@ -141,9 +157,9 @@ namespace View
         }
         private bool Checkear()
         {
-            if(fechaIda != string.Empty && datoOrigen != string.Empty && datoDestino != string.Empty)
+            if(fechaIda != null && datoOrigen != string.Empty && datoDestino != string.Empty)
             {
-                if(monthCalendarVuelta.Enabled && fechaVuelta == string.Empty)
+                if(monthCalendarVuelta.Enabled && fechaVuelta == null)
                 {
                     return false;
                 }
