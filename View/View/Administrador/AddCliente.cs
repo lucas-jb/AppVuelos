@@ -19,7 +19,6 @@ namespace View.View.Administrador
             InitializeComponent();
             CheckearCampos();
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (!RellenadoCheck())
