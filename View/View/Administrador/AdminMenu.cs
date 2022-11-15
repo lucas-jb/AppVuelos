@@ -16,5 +16,17 @@ namespace View.View.Administrador
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var addcliente = new AddCliente();
+            addcliente.Show();
+            this.Hide();
+        }
     }
 }

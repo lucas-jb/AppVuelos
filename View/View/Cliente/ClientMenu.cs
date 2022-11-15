@@ -16,5 +16,12 @@ namespace View.View.Cliente
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var menucompra = new Form1();
+            menucompra.Show();
+            this.Hide();
+        }
     }
 }

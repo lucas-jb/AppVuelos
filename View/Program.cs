@@ -1,3 +1,4 @@
+using View.View;
 using View.View.Administrador;
 
 namespace View
@@ -14,7 +15,8 @@ namespace View
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new Form1());
-            Application.Run(new AddCliente());
+            //Application.Run(new AddCliente());
+            Application.Run(new Login());
         }
     }
 }

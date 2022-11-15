@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.View.Administrador;
+using View.View.Cliente;
 
 namespace View.View
 {
@@ -19,7 +21,22 @@ namespace View.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if(textBoxUser.Text == "cliente" && textBoxPass.Text == "1234")
+            {
+                var menu = new ClientMenu();
+                menu.Show();
+                this.Hide();
+            }else 
+            if(textBoxUser.Text == "admin" && textBoxPass.Text == "1234")
+            {
+                var menu = new AdminMenu();
+                menu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos", "Error");
+            }
         }
     }
 }
