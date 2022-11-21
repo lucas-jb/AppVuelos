@@ -8,6 +8,7 @@ namespace View.Model
 {
     public class Billete
     {
+        public int Id { get; set; }
         public Persona Pasajero { get; set; }
         public Vuelo Ida { get; set; }
         public Vuelo? Vuelta { get; set; } = null;

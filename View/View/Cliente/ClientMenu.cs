@@ -12,6 +12,7 @@ namespace View.View.Cliente
 {
     public partial class ClientMenu : Form
     {
+        public string clientDni = string.Empty;
         public ClientMenu()
         {
             InitializeComponent();
@@ -22,6 +23,11 @@ namespace View.View.Cliente
             var menucompra = new Form1();
             menucompra.Show();
             this.Hide();
+        }
+
+        private void btnHistorico_Click(object sender, EventArgs e)
+        {
+            this.labelDatos.Text = Login.billeteContainer.BuscarDniToString(clientDni);
         }
     }
 }
