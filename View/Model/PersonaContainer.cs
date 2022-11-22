@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace View.Model
 {
-    public class PersonaContainer
+    public static class PersonaContainer
     {
         public static List<Persona> personas = new();
 
-        public PersonaContainer()
+        public static void BuildPersonaContainer()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -31,7 +31,7 @@ namespace View.Model
                 });
             }
         }
-        public bool Exists(string dni)
+        public static bool Exists(string dni)
         {
             if(personas.FirstOrDefault(persona => persona.Dni == dni) != null)
             {
@@ -39,14 +39,14 @@ namespace View.Model
             }
             return false;
         }
-        public void AddPersona(Persona persona)
+        public static void AddPersona(Persona persona)
         {
             if (persona != null)
             {
                 personas.Add(persona);
             }
         }
-        public Persona BuscarDni(string dni)
+        public static Persona BuscarDni(string dni)
         {
             if (dni != null)
             {

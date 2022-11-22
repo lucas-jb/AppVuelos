@@ -15,6 +15,7 @@ namespace View.View.Administrador
     {
         private int celselected = -1;
         private AdminMenu menu;
+        BindingSource bs = new BindingSource();
         public AddCliente(AdminMenu menu)
         {
             this.menu = menu;
@@ -36,13 +37,8 @@ namespace View.View.Administrador
                     Direccion = textBoxAdress.Text,
                     Dni = textBoxDni.Text
                 };
-                int cont = dataGridView1.Rows.Add();
-                DataGridViewRow row = dataGridView1.Rows[cont];
-                row.Cells[0].Value = persona.Nombre;
-                row.Cells[1].Value = persona.Apellidos;
-                row.Cells[2].Value = persona.Direccion;
-                row.Cells[3].Value = persona.Dni;
-
+                PersonaContainer.personas.Add(persona);
+                MostrarClientes();
                 ClearDatos();
             }
         }
@@ -142,6 +138,20 @@ namespace View.View.Administrador
         {
             menu.Show();
             this.Close();
+        }
+
+        private void AddCliente_Load(object sender, EventArgs e)
+        {
+            MostrarClientes();
+        }
+
+        private void MostrarClientes()
+        {
+            List<Persona> lista = PersonaContainer.personas;
+            bs.DataSource = typeof(Persona);
+            bs.DataSource = lista;
+            dataGridView1.DataSource = bs;
+            dataGridView1.AutoGenerateColumns = true;
         }
     }
 }

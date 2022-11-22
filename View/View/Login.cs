@@ -15,16 +15,15 @@ namespace View.View
 {
     public partial class Login : Form
     {
-        public static BilleteContainer billeteContainer = new BilleteContainer();
-        public static PersonaContainer personaContainer = new PersonaContainer();
         public Login()
         {
+            PersonaContainer.BuildPersonaContainer();
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (personaContainer.Exists(textBoxUser.Text) && textBoxPass.Text == "1234")
+            if (PersonaContainer.Exists(textBoxUser.Text) && textBoxPass.Text == "1234")
             {
                 var menu = new ClientMenu(this)
                 {

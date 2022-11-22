@@ -31,7 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnVerBilletes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,14 +63,15 @@
             this.button3.Text = "Modificar billetes";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnVerBilletes
             // 
-            this.button4.Location = new System.Drawing.Point(31, 113);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(206, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Ver billetes";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnVerBilletes.Location = new System.Drawing.Point(31, 113);
+            this.btnVerBilletes.Name = "btnVerBilletes";
+            this.btnVerBilletes.Size = new System.Drawing.Size(206, 23);
+            this.btnVerBilletes.TabIndex = 2;
+            this.btnVerBilletes.Text = "Ver billetes";
+            this.btnVerBilletes.UseVisualStyleBackColor = true;
+            this.btnVerBilletes.Click += new System.EventHandler(this.btnVerBilletes_Click);
             // 
             // btnSalir
             // 
@@ -86,10 +87,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 249);
+            this.ClientSize = new System.Drawing.Size(266, 249);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnVerBilletes);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "AdminMenu";
@@ -103,7 +104,7 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button4;
+        private Button btnVerBilletes;
         private Button btnSalir;
     }
 }

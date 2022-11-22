@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace View.Model
 {
-    public class BilleteContainer
+    public static class BilleteContainer
     {
         public static List<Billete> billetes = new();
 
-        public Billete BuscarId(int id)
+        public static Billete BuscarId(int id)
         {
             if (id > 0)
             {
@@ -18,7 +18,7 @@ namespace View.Model
             }
             return new Billete();
         }
-        public string BuscarIdToString(int id)
+        public static string BuscarIdToString(int id)
         {
             if (id > 0)
             {
@@ -26,7 +26,7 @@ namespace View.Model
             }
             return new Billete().MostrarBillete();
         }
-        public List<Billete> BuscarDni(string dni)
+        public static List<Billete> BuscarDni(string dni)
         {
             if (dni != null)
             {
@@ -35,7 +35,7 @@ namespace View.Model
             return new List<Billete>();
         }
 
-        public string BuscarDniToString(string dni)
+        public static string BuscarDniToString(string dni)
         {
             List<Billete> billetes = BuscarDni(dni);
             string text = string.Empty;
@@ -49,7 +49,7 @@ namespace View.Model
             return text;
         }
 
-        public void AddBillete(Billete billete)
+        public static void AddBillete(Billete billete)
         {
             if (billete != null)
             {

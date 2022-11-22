@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Model;
 
 namespace View.View.Cliente
 {
@@ -29,14 +30,14 @@ namespace View.View.Cliente
 
         private void btnHistorico_Click(object sender, EventArgs e)
         {
-            this.labelDatos.Text = Login.billeteContainer.BuscarDniToString(clientDni);
+            this.labelDatos.Text = BilleteContainer.BuscarDniToString(clientDni);
         }
 
         private void btnVerVuelo_Click(object sender, EventArgs e)
         {
             try
             {
-                this.labelDatos.Text = Login.billeteContainer.BuscarIdToString(Int32.Parse(textBox1.Text));
+                this.labelDatos.Text = BilleteContainer.BuscarIdToString(Int32.Parse(textBox1.Text));
             }
             catch
             {

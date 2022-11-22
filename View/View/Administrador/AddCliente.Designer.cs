@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxDni = new System.Windows.Forms.TextBox();
@@ -50,11 +46,6 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Apellidos,
-            this.Direccion,
-            this.Dni});
             this.dataGridView1.Location = new System.Drawing.Point(27, 170);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -62,30 +53,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(445, 247);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.Name = "Apellidos";
-            this.Apellidos.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Dirección";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Dni
-            // 
-            this.Dni.HeaderText = "DNI";
-            this.Dni.Name = "Dni";
-            this.Dni.ReadOnly = true;
             // 
             // textBoxName
             // 
@@ -204,6 +171,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "AddCliente";
             this.Text = "AddCliente";
+            this.Load += new System.EventHandler(this.AddCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,10 +181,6 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Apellidos;
-        private DataGridViewTextBoxColumn Direccion;
-        private DataGridViewTextBoxColumn Dni;
         private TextBox textBoxName;
         private TextBox textBoxSurname;
         private TextBox textBoxDni;

@@ -31,5 +31,12 @@ namespace View.View.Administrador
             addcliente.Show();
             this.Hide();
         }
+
+        private void btnVerBilletes_Click(object sender, EventArgs e)
+        {
+            var verbilletes = new VerBilletes(this);
+            verbilletes.Show();
+            this.Hide();
+        }
     }
 }
