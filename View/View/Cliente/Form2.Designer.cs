@@ -47,6 +47,7 @@
             this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.btCompra = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -225,17 +226,28 @@
             // 
             this.btCompra.Location = new System.Drawing.Point(21, 280);
             this.btCompra.Name = "btCompra";
-            this.btCompra.Size = new System.Drawing.Size(682, 53);
+            this.btCompra.Size = new System.Drawing.Size(573, 53);
             this.btCompra.TabIndex = 2;
             this.btCompra.Text = "Comprar billete";
             this.btCompra.UseVisualStyleBackColor = true;
             this.btCompra.Click += new System.EventHandler(this.btCompra_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(600, 280);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(103, 53);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 345);
+            this.ClientSize = new System.Drawing.Size(720, 371);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btCompra);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -270,5 +282,6 @@
         private TextBox textBoxApellido;
         private TextBox textBoxNombre;
         private Button btCompra;
+        private Button btnSalir;
     }
 }

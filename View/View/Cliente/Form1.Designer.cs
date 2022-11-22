@@ -46,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.labeldatos1 = new System.Windows.Forms.Label();
             this.labeldatos2 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monthCalendarIda
@@ -224,11 +225,22 @@
             this.labeldatos2.Size = new System.Drawing.Size(0, 15);
             this.labeldatos2.TabIndex = 17;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(428, 572);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 18;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 607);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.labeldatos2);
             this.Controls.Add(this.labeldatos1);
             this.Controls.Add(this.label4);
@@ -274,5 +286,6 @@
         private Label label4;
         private Label labeldatos1;
         private Label labeldatos2;
+        private Button btnSalir;
     }
 }

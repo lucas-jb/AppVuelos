@@ -1,4 +1,5 @@
 using View.Model;
+using View.View.Cliente;
 
 namespace View
 {
@@ -9,16 +10,17 @@ namespace View
         private DateTime? fechaIda = null;
         private DateTime? fechaVuelta = null;
         private Form2 formdatos;
+        private ClientMenu menu;
 
-
-        public Form1()
+        public Form1(ClientMenu menu)
         {
             InitializeComponent();
             var fecha = DateTime.Now.Date;
             label3.Text = fecha.ToString();
-            formdatos = new Form2();
+            formdatos = new Form2(this);
             formdatos.Hide();
             labeldatos1.Hide();
+            this.menu = menu;
         }
 
         private void btSelectVuelta_Click(object sender, EventArgs e)
@@ -166,6 +168,12 @@ namespace View
                 return true;
             }
             return false;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Close();
         }
     }
 }

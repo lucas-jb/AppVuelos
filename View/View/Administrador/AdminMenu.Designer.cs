@@ -32,7 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -72,22 +72,22 @@
             this.button4.Text = "Ver billetes";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnSalir
             // 
-            this.button5.Location = new System.Drawing.Point(33, 201);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(206, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Salir de la aplicación";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnSalir.Location = new System.Drawing.Point(33, 201);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(206, 23);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir de la aplicación";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(273, 249);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -104,6 +104,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
-        private Button button5;
+        private Button btnSalir;
     }
 }

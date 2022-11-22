@@ -18,6 +18,14 @@ namespace View.Model
             }
             return new Billete();
         }
+        public string BuscarIdToString(int id)
+        {
+            if (id > 0)
+            {
+                return billetes.FirstOrDefault(billete => billete.Id == id).MostrarBillete() ?? new Billete().MostrarBillete();
+            }
+            return new Billete().MostrarBillete();
+        }
         public List<Billete> BuscarDni(string dni)
         {
             if (dni != null)
@@ -27,7 +35,7 @@ namespace View.Model
             return new List<Billete>();
         }
 
-        public String BuscarDniToString(string dni)
+        public string BuscarDniToString(string dni)
         {
             List<Billete> billetes = BuscarDni(dni);
             string text = string.Empty;

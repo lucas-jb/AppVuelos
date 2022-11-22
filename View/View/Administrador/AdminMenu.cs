@@ -12,19 +12,22 @@ namespace View.View.Administrador
 {
     public partial class AdminMenu : Form
     {
-        public AdminMenu()
+        private Login login;
+        public AdminMenu(Login login)
         {
+            this.login = login;
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            login.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var addcliente = new AddCliente();
+            var addcliente = new AddCliente(this);
             addcliente.Show();
             this.Hide();
         }

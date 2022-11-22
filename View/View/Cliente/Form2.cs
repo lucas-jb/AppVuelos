@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.Model;
+using View.View.Cliente;
 
 namespace View
 {
@@ -15,10 +16,11 @@ namespace View
     {
         public Vuelo? vueloIda = null;
         public Vuelo? vueloVuelta = null;
+        private Form1 menu;
 
-
-        public Form2()
+        public Form2(Form1 menu)
         {
+            this.menu = menu;
             InitializeComponent();
         }
         public void Actualizar()
@@ -160,6 +162,12 @@ namespace View
             {
                 MessageBox.Show("Faltan datos", "Cancelado");
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Close();
         }
     }
 }

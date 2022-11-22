@@ -26,7 +26,7 @@ namespace View.View
         {
             if (personaContainer.Exists(textBoxUser.Text) && textBoxPass.Text == "1234")
             {
-                var menu = new ClientMenu()
+                var menu = new ClientMenu(this)
                 {
                     clientDni = textBoxUser.Text
                 };
@@ -35,7 +35,7 @@ namespace View.View
             }else 
             if(textBoxUser.Text == "admin" && textBoxPass.Text == "1234")
             {
-                var menu = new AdminMenu();
+                var menu = new AdminMenu(this);
                 menu.Show();
                 this.Hide();
             }

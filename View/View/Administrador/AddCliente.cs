@@ -14,8 +14,10 @@ namespace View.View.Administrador
     public partial class AddCliente : Form
     {
         private int celselected = -1;
-        public AddCliente()
+        private AdminMenu menu;
+        public AddCliente(AdminMenu menu)
         {
+            this.menu = menu;
             InitializeComponent();
             CheckearCampos();
         }
@@ -134,6 +136,12 @@ namespace View.View.Administrador
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             celselected = e.RowIndex;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Close();
         }
     }
 }
