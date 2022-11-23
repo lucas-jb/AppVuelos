@@ -19,7 +19,8 @@ namespace View.Model
                     Nombre = "Nombre"+i,
                     Apellidos = "Apellidos"+i,
                     Direccion = "Dorección"+i,
-                    Dni = "dni"+i
+                    Dni = "dni"+i,
+                    Pass = generador_pass()
                 });
 
                 BilleteContainer.
@@ -30,6 +31,23 @@ namespace View.Model
                     Vuelta = Vuelo.RandomVuelo()
                 });
             }
+            personas.Add(new Persona()
+            {
+                Nombre = "admin",
+                Apellidos = "admin",
+                Direccion = "admin",
+                Dni = "admin",
+                Pass = "admin",
+                admin = true
+            });
+            personas.Add(new Persona()
+            {
+                Nombre = "user",
+                Apellidos = "user",
+                Direccion = "user",
+                Dni = "user",
+                Pass = "user"
+            });
         }
         public static bool Exists(string dni)
         {
@@ -53,6 +71,18 @@ namespace View.Model
                 return personas.FirstOrDefault(persona => persona.Dni == dni) ?? new Persona();
             }
             return new Persona();
+        }
+        public static string generador_pass()
+        {
+            var chars =
+           "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var stringChars = new char[8];
+            var random = new Random();
+            for (int i = 0; i < stringChars.Length; i++)
+            {
+                stringChars[i] = chars[random.Next(chars.Length)];
+            }
+            return (new String(stringChars));
         }
     }
 }

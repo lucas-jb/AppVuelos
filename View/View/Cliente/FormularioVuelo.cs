@@ -3,21 +3,21 @@ using View.View.Cliente;
 
 namespace View
 {
-    public partial class Form1 : Form
+    public partial class FormularioVuelo : Form
     {
         private string datoOrigen = string.Empty;
         private string datoDestino = string.Empty;
         private DateTime? fechaIda = null;
         private DateTime? fechaVuelta = null;
-        private Form2 formdatos;
+        private ComprarBillete formdatos;
         private ClientMenu menu;
 
-        public Form1(ClientMenu menu)
+        public FormularioVuelo(ClientMenu menu)
         {
             InitializeComponent();
             var fecha = DateTime.Now.Date;
             label3.Text = fecha.ToString();
-            formdatos = new Form2(this);
+            formdatos = new ComprarBillete(this);
             formdatos.Hide();
             labeldatos1.Hide();
             this.menu = menu;

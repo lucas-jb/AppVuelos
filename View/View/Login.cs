@@ -23,20 +23,22 @@ namespace View.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (PersonaContainer.Exists(textBoxUser.Text) && textBoxPass.Text == "1234")
+            if (PersonaContainer.BuscarDni(textBoxUser.Text).CheckPass(textBoxUser.Text, textBoxPass.Text))
             {
-                var menu = new ClientMenu(this)
+                if (PersonaContainer.BuscarDni(textBoxUser.Text).admin == false){
+                    var menu = new ClientMenu(this)
+                    {
+                        clientDni = textBoxUser.Text
+                    };
+                    menu.Show();
+                    this.Hide();
+                }
+                else
                 {
-                    clientDni = textBoxUser.Text
-                };
-                menu.Show();
-                this.Hide();
-            }else 
-            if(textBoxUser.Text == "admin" && textBoxPass.Text == "1234")
-            {
-                var menu = new AdminMenu(this);
-                menu.Show();
-                this.Hide();
+                    var menu = new AdminMenu(this);
+                    menu.Show();
+                    this.Hide();
+                }
             }
             else
             {

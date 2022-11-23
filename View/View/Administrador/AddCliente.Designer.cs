@@ -50,7 +50,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(445, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(661, 247);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -58,7 +58,7 @@
             // 
             this.textBoxName.Location = new System.Drawing.Point(86, 34);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(185, 23);
+            this.textBoxName.Size = new System.Drawing.Size(334, 23);
             this.textBoxName.TabIndex = 1;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
@@ -66,7 +66,7 @@
             // 
             this.textBoxSurname.Location = new System.Drawing.Point(86, 63);
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(185, 23);
+            this.textBoxSurname.Size = new System.Drawing.Size(334, 23);
             this.textBoxSurname.TabIndex = 2;
             this.textBoxSurname.TextChanged += new System.EventHandler(this.textBoxSurname_TextChanged);
             // 
@@ -74,7 +74,7 @@
             // 
             this.textBoxDni.Location = new System.Drawing.Point(86, 121);
             this.textBoxDni.Name = "textBoxDni";
-            this.textBoxDni.Size = new System.Drawing.Size(185, 23);
+            this.textBoxDni.Size = new System.Drawing.Size(334, 23);
             this.textBoxDni.TabIndex = 4;
             this.textBoxDni.TextChanged += new System.EventHandler(this.textBoxDni_TextChanged);
             // 
@@ -82,7 +82,7 @@
             // 
             this.textBoxAdress.Location = new System.Drawing.Point(86, 92);
             this.textBoxAdress.Name = "textBoxAdress";
-            this.textBoxAdress.Size = new System.Drawing.Size(185, 23);
+            this.textBoxAdress.Size = new System.Drawing.Size(334, 23);
             this.textBoxAdress.TabIndex = 3;
             this.textBoxAdress.TextChanged += new System.EventHandler(this.textBoxAdress_TextChanged);
             // 
@@ -124,7 +124,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(318, 34);
+            this.btnAdd.Location = new System.Drawing.Point(534, 34);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(154, 52);
             this.btnAdd.TabIndex = 9;
@@ -134,7 +134,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(318, 92);
+            this.btnDelete.Location = new System.Drawing.Point(534, 95);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(154, 52);
             this.btnDelete.TabIndex = 10;
@@ -144,7 +144,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(318, 423);
+            this.btnSalir.Location = new System.Drawing.Point(534, 423);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(154, 52);
             this.btnSalir.TabIndex = 11;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 484);
+            this.ClientSize = new System.Drawing.Size(701, 484);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);

@@ -12,13 +12,13 @@ using View.View.Cliente;
 
 namespace View
 {
-    public partial class Form2 : Form
+    public partial class ComprarBillete : Form
     {
         public Vuelo? vueloIda = null;
         public Vuelo? vueloVuelta = null;
-        private Form1 menu;
+        private FormularioVuelo menu;
 
-        public Form2(Form1 menu)
+        public ComprarBillete(FormularioVuelo menu)
         {
             this.menu = menu;
             InitializeComponent();

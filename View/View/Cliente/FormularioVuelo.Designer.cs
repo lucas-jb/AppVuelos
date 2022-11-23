@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class Form1
+    partial class FormularioVuelo
     {
         /// <summary>
         ///  Required designer variable.

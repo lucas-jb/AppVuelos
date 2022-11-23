@@ -21,12 +21,18 @@ namespace View.View.Administrador
         }
         private void Ver_billetes_Load(object sender, EventArgs e)
         {
-            foreach (Persona p in PersonaContainer.personas)
-            {
-                var s = ; //= Grafico.Series.Add(p.Dni);
-                s.Label = p.Dni;
-                s.Points.Add(BilleteContainer.BuscarDni(p.Dni));
-            }
+            //foreach (Persona p in PersonaContainer.personas)
+            //{
+            //    var s = ; //= Grafico.Series.Add(p.Dni);
+            //    s.Label = p.Dni;
+            //    s.Points.Add(BilleteContainer.BuscarDni(p.Dni));
+            //}
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Close();
         }
     }
 }

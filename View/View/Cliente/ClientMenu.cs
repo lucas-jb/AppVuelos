@@ -23,7 +23,7 @@ namespace View.View.Cliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var menucompra = new Form1(this);
+            var menucompra = new FormularioVuelo(this);
             menucompra.Show();
             this.Hide();
         }

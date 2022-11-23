@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class Form2
+    partial class ComprarBillete
     {
         /// <summary>
         /// Required designer variable.
@@ -242,7 +242,7 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Form2
+            // ComprarBillete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -251,8 +251,8 @@
             this.Controls.Add(this.btCompra);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "ComprarBillete";
+            this.Text = "ComprarBillete";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
