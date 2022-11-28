@@ -20,7 +20,7 @@ namespace View.Model
                     Apellidos = "Apellidos"+i,
                     Direccion = "Dorección"+i,
                     Dni = "dni"+i,
-                    Pass = generador_pass()
+                    Pass = generador_pass(8)
                 });
 
                 BilleteContainer.
@@ -72,11 +72,11 @@ namespace View.Model
             }
             return new Persona();
         }
-        public static string generador_pass()
+        public static string generador_pass(int size)
         {
             var chars =
            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var stringChars = new char[8];
+            var stringChars = new char[size];
             var random = new Random();
             for (int i = 0; i < stringChars.Length; i++)
             {

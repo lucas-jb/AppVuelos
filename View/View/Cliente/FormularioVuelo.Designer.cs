@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioVuelo));
             this.monthCalendarIda = new System.Windows.Forms.MonthCalendar();
             this.monthCalendarVuelta = new System.Windows.Forms.MonthCalendar();
             this.btComprar = new System.Windows.Forms.Button();
@@ -235,10 +236,11 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Form1
+            // FormularioVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(515, 607);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.labeldatos2);
@@ -259,8 +261,9 @@
             this.Controls.Add(this.btComprar);
             this.Controls.Add(this.monthCalendarVuelta);
             this.Controls.Add(this.monthCalendarIda);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormularioVuelo";
+            this.Text = "Formulario vuelo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

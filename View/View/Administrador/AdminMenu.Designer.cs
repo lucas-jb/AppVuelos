@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
+            this.btnAeropuerto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnVerBilletes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAeropuerto
             // 
-            this.button1.Location = new System.Drawing.Point(31, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Crear aeropuertos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAeropuerto.Location = new System.Drawing.Point(31, 30);
+            this.btnAeropuerto.Name = "btnAeropuerto";
+            this.btnAeropuerto.Size = new System.Drawing.Size(206, 23);
+            this.btnAeropuerto.TabIndex = 0;
+            this.btnAeropuerto.Text = "Crear aeropuertos";
+            this.btnAeropuerto.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -99,14 +100,12 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // btnCargar
+            // textBox1
             // 
-            this.btnCargar.Location = new System.Drawing.Point(6, 22);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(93, 44);
-            this.btnCargar.TabIndex = 0;
-            this.btnCargar.Text = "Cargar fichero";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(6, 72);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 23);
+            this.textBox1.TabIndex = 2;
             // 
             // btnGuardar
             // 
@@ -117,26 +116,30 @@
             this.btnGuardar.Text = "Guardar fichero";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // btnCargar
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 23);
-            this.textBox1.TabIndex = 2;
+            this.btnCargar.Location = new System.Drawing.Point(6, 22);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(93, 44);
+            this.btnCargar.TabIndex = 0;
+            this.btnCargar.Text = "Cargar fichero";
+            this.btnCargar.UseVisualStyleBackColor = true;
             // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(271, 348);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnVerBilletes);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAeropuerto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMenu";
-            this.Text = "AdminMenu";
+            this.Text = "Menú administrador";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -145,7 +148,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnAeropuerto;
         private Button button2;
         private Button button3;
         private Button btnVerBilletes;

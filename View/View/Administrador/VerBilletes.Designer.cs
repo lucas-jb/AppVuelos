@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerBilletes));
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -45,10 +46,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VerBilletes";
-            this.Text = "VerBilletes";
+            this.Text = "Ver billetes";
             this.ResumeLayout(false);
 
         }

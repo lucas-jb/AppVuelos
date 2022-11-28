@@ -8,8 +8,8 @@ namespace View.Model
 {
     public class Vuelo
     {
-        public string Origen { get; set; } = string.Empty;
-        public string Destino { get; set; } = string.Empty;
+        public Aeropuerto Origen { get; set; }
+        public Aeropuerto Destino { get; set; }
         public DateTime Fecha { get; set; }
 
         private static List<string> lugares = new()
@@ -31,16 +31,24 @@ namespace View.Model
                 "Destino: " + Destino + Environment.NewLine +
                 "Fecha: " + Fecha.ToString() + Environment.NewLine;
         }
-
-        public static Vuelo RandomVuelo()
+        private static Aeropuerto RandomAeropuerto()
         {
             Random rnd = new Random();
-            int origen = rnd.Next(lugares.Count);
-            int destino = rnd.Next(lugares.Count);
+            int cant = rnd.Next(lugares.Count);
+
+            return new Aeropuerto()
+            {
+                Id = AeropuertoContainer.aeropuertos.Count(),
+                Nombre = lugares[cant],
+                Descripcion = "Descripción."
+            };
+        }
+        public static Vuelo RandomVuelo()
+        {
             return new Vuelo()
             {
-                Origen = lugares[origen],
-                Destino = lugares[destino],
+                Origen = RandomAeropuerto(),
+                Destino = RandomAeropuerto(),
                 Fecha = DateTime.Now
             };
         }

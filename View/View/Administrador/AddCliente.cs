@@ -119,9 +119,22 @@ namespace View.View.Administrador
         {
             if (celselected != -1 && dataGridView1.Rows.Count-1!=celselected)
             {
-                dataGridView1.Rows.Remove(dataGridView1.Rows[celselected]);
-                celselected = -1;
-                dataGridView1.ClearSelection();
+                int index = dataGridView1.SelectedCells[0].RowIndex;
+                string? dni = dataGridView1.Rows[index].Cells[3].Value.ToString();
+
+                if (BilleteContainer.BuscarDni(dni).Count > 0)
+                {
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    string cuerpo = "Este usuario tiene billetes asociados. ¿Eliminar aún así?";
+                    string cabecera = "ATENCIÓN";
+                    DialogResult resultado = MessageBox.Show(cuerpo, cabecera, botones);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        dataGridView1.Rows.Remove(dataGridView1.Rows[celselected]);
+                        celselected = -1;
+                        dataGridView1.ClearSelection();
+                    }
+                }
             }
             else
             {
