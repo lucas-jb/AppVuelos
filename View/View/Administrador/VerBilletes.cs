@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.Model;
 
+
 namespace View.View.Administrador
 {
     public partial class VerBilletes : Form
@@ -23,7 +24,7 @@ namespace View.View.Administrador
         {
             //foreach (Persona p in PersonaContainer.personas)
             //{
-            //    var s = ; //= Grafico.Series.Add(p.Dni);
+            //    var s = Grafico.Series.Add(p.Dni);
             //    s.Label = p.Dni;
             //    s.Points.Add(BilleteContainer.BuscarDni(p.Dni));
             //}

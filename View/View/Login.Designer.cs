@@ -37,16 +37,18 @@
             // 
             // textBoxUser
             // 
-            this.textBoxUser.Location = new System.Drawing.Point(85, 28);
+            this.textBoxUser.Location = new System.Drawing.Point(12, 28);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(115, 23);
+            this.textBoxUser.PlaceholderText = "Usuario";
+            this.textBoxUser.Size = new System.Drawing.Size(188, 23);
             this.textBoxUser.TabIndex = 0;
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(85, 57);
+            this.textBoxPass.Location = new System.Drawing.Point(12, 57);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(115, 23);
+            this.textBoxPass.PlaceholderText = "Contraseña";
+            this.textBoxPass.Size = new System.Drawing.Size(188, 23);
             this.textBoxPass.TabIndex = 1;
             // 
             // btnLogin
@@ -64,18 +66,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Contraseña";
             // 
             // Login
             // 
