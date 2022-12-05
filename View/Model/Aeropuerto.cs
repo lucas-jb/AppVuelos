@@ -11,6 +11,7 @@ namespace View.Model
         public int Id { get; set; } = 0;
         public string Nombre { get; set; } = string.Empty;
         public string Descripcion { get; set; } = string.Empty;
+        public string Lugar { get; set; } = string.Empty;
 
     }
 }

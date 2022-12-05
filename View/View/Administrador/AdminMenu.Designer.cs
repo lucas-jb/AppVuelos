@@ -49,6 +49,7 @@
             this.btnAeropuerto.TabIndex = 0;
             this.btnAeropuerto.Text = "Crear aeropuertos";
             this.btnAeropuerto.UseVisualStyleBackColor = true;
+            this.btnAeropuerto.Click += new System.EventHandler(this.btnAeropuerto_Click);
             // 
             // button2
             // 

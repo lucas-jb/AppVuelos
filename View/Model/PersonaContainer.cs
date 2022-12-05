@@ -30,6 +30,15 @@ namespace View.Model
                     Ida = Vuelo.RandomVuelo(),
                     Vuelta = Vuelo.RandomVuelo()
                 });
+
+                AeropuertoContainer.
+                aeropuertos.Add(new Aeropuerto
+                {
+                    Id = i,
+                    Nombre = "Aeropuerto"+i,
+                    Lugar = "Lugar"+i,
+                    Descripcion = "Descripción"+i
+                });
             }
             personas.Add(new Persona()
             {
