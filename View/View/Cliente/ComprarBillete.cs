@@ -50,10 +50,10 @@ namespace ViewAeropuerto
         }
         public void ClearDatos()
         {
-            this.textBoxNombre.Text = string.Empty;
-            this.textBoxApellido.Text = string.Empty;
-            this.textBoxDireccion.Text = string.Empty;
-            this.textBoxDNI.Text = string.Empty;
+            this.textBoxNombre.Text = menu.menu.user.Nombre;
+            this.textBoxApellido.Text = menu.menu.user.Apellidos;
+            this.textBoxDireccion.Text = menu.menu.user.Direccion;
+            this.textBoxDNI.Text = menu.menu.user.Dni;
         }
         public string DameDatos()
         {

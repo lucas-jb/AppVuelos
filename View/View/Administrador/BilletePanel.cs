@@ -18,11 +18,13 @@ namespace ViewAeropuerto.View.Administrador
         private int celselected = -1;
         private AdminMenu menu;
         BindingSource bs = new BindingSource();
+        private string dniSelected = string.Empty;
+        private string ida = string.Empty;
+        private string vuelta = string.Empty;
         public BilletePanel(AdminMenu menu)
         {
             this.menu = menu;
             InitializeComponent();
-            //CheckearCampos();
         }
 
         public bool CheckearCampos()
@@ -62,58 +64,14 @@ namespace ViewAeropuerto.View.Administrador
             return true;
         }
 
-        public void ClearDatos()
-        {
-            this.comboBoxOrigen.SelectedIndex = -1;
-            this.dateTimePickerDestino.Value = DateTime.Now;
-            this.comboBoxDestino.SelectedIndex = -1;
-            this.dateTimePickerDestino.Value = DateTime.Now;
-        }
-        //public bool RellenadoCheck()
-        //{
-        //    if (this.textBoxName.Text != string.Empty && this.textBoxLugar.Text != string.Empty && this.textBoxDescription.Text != string.Empty)
-        //    {
-        //        return true;
-        //    }
-        //    return false;
-        //}
-
         private void MostrarBilletes()
         {
+            dataGridView1.Rows.Clear();
             List<Billete> lista = BilleteContainer.billetes;
             foreach (Billete billete in lista)
             {
                 dataGridView1.Rows.Add(billete.Id.ToString(), billete.Pasajero.Dni, billete.Ida.Origen.Lugar, billete.Ida.Fecha, billete.Vuelta.Origen.Lugar, billete.Vuelta.Fecha);
             }
-            //bs.DataSource = typeof(Billete);
-            //bs.DataSource = lista;
-            //dataGridView1.DataSource = bs;
-            //dataGridView1.AutoGenerateColumns = true;
-        }
-
-        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            celselected = e.RowIndex;
-        }
-
-        private void AeropuertoPanel_Load(object sender, EventArgs e)
-        {
-            MostrarBilletes();
-        }
-
-        private void textBoxName_TextChanged_1(object sender, EventArgs e)
-        {
-            CheckearCampos();
-        }
-
-        private void textBoxLugar_TextChanged(object sender, EventArgs e)
-        {
-            CheckearCampos();
-        }
-
-        private void textBoxDescription_TextChanged(object sender, EventArgs e)
-        {
-            CheckearCampos();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -140,8 +98,11 @@ namespace ViewAeropuerto.View.Administrador
                 int index = dataGridView1.SelectedCells[0].RowIndex;
                 comboBoxOrigen.Text = string.Empty;
                 comboBoxDestino.Text = string.Empty;
+                dniSelected = dataGridView1.Rows[index].Cells[1].Value.ToString();
                 this.comboBoxOrigen.SelectedText = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                //this.ida = dataGridView1.Rows[index].Cells[2].Value.ToString();
                 this.comboBoxDestino.SelectedText = dataGridView1.Rows[index].Cells[4].Value.ToString();
+                //this.vuelta = dataGridView1.Rows[index].Cells[4].Value.ToString();
                 this.dateTimePickerOrigen.Value = DateTime.Parse(dataGridView1.Rows[index].Cells[3].Value.ToString());
                 this.dateTimePickerDestino.Value = DateTime.Parse(dataGridView1.Rows[index].Cells[5].Value.ToString());
                 string? id = dataGridView1.Rows[index].Cells[0].Value.ToString();
@@ -191,6 +152,48 @@ namespace ViewAeropuerto.View.Administrador
         private void comboBoxDestino_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (celselected != -1 && dataGridView1.Rows.Count - 1 != celselected)
+            {
+                int index = dataGridView1.SelectedCells[0].RowIndex;
+                string? id = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                string cuerpo = "Este billete tiene un usuario asociado. ¿Editar aún así?";
+                string cabecera = "ATENCIÓN";
+                DialogResult resultado = MessageBox.Show(cuerpo, cabecera, botones);
+                if (resultado == DialogResult.Yes)
+                {
+                    Billete billete = new Billete()
+                    {
+                        Id = Int32.Parse(id),
+                        Ida = Vuelo.DameVueloPorAeropuerto(this.ida, this.vuelta, this.dateTimePickerOrigen.Value),
+                        Vuelta = Vuelo.DameVueloPorAeropuerto(this.vuelta, this.ida, this.dateTimePickerDestino.Value),
+                        Pasajero = PersonaContainer.BuscarDni(dniSelected)
+                    };
+                    dataGridView1.Rows.Remove(dataGridView1.Rows[celselected]);
+                    celselected = -1;
+                    dataGridView1.ClearSelection();
+                    BilleteContainer.ModificarBillete(billete);
+                    MostrarBilletes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No has seleccionado ningun billete", "Cancelado");
+            }
+        }
+
+        private void comboBoxOrigen_TextChanged(object sender, EventArgs e)
+        {
+            this.ida = comboBoxOrigen.Text;
+        }
+
+        private void comboBoxDestino_TextChanged(object sender, EventArgs e)
+        {
+            this.vuelta = comboBoxDestino.Text;
         }
     }
 }

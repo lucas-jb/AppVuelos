@@ -127,6 +127,7 @@
             this.btnEdit.TabIndex = 34;
             this.btnEdit.Text = "Modificar";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // label4
             // 
@@ -212,6 +213,7 @@
             this.comboBoxOrigen.Size = new System.Drawing.Size(255, 23);
             this.comboBoxOrigen.TabIndex = 43;
             this.comboBoxOrigen.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrigen_SelectedIndexChanged);
+            this.comboBoxOrigen.TextChanged += new System.EventHandler(this.comboBoxOrigen_TextChanged);
             // 
             // comboBoxDestino
             // 
@@ -230,6 +232,7 @@
             this.comboBoxDestino.Size = new System.Drawing.Size(255, 23);
             this.comboBoxDestino.TabIndex = 44;
             this.comboBoxDestino.SelectedIndexChanged += new System.EventHandler(this.comboBoxDestino_SelectedIndexChanged);
+            this.comboBoxDestino.TextChanged += new System.EventHandler(this.comboBoxDestino_TextChanged);
             // 
             // dateTimePickerOrigen
             // 
@@ -278,6 +281,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BilletePanel";
             this.Text = "BilletePanel";
             this.Load += new System.EventHandler(this.BilletePanel_Load);

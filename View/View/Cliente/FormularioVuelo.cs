@@ -62,7 +62,7 @@ namespace ViewAeropuerto
         {
             monthCalendarVuelta.MinDate = monthCalendarIda.SelectionRange.Start;
             label3.Text = monthCalendarIda.SelectionEnd.ToString();
-            fechaIda = monthCalendarIda.SelectionEnd;
+            fechaIda = DateTime.Parse(monthCalendarIda.SelectionEnd.ToString());
             label4.Text = string.Empty;
             fechaVuelta = null;
         }
@@ -70,7 +70,7 @@ namespace ViewAeropuerto
         private void monthCalendarVuelta_DateChanged(object sender, DateRangeEventArgs e)
         {
             label4.Text = monthCalendarVuelta.SelectionEnd.ToString();
-            fechaVuelta = monthCalendarIda.SelectionEnd;
+            fechaVuelta = DateTime.Parse(monthCalendarVuelta.SelectionEnd.ToString());
         }
 
         private void comboBoxDestino_SelectedIndexChanged(object sender, EventArgs e)

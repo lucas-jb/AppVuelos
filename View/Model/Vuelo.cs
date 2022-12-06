@@ -63,7 +63,15 @@ namespace ViewAeropuerto.Model
                     Fecha = DateTime.Now
                 };
             }
-
+        }
+        public static Vuelo DameVueloPorAeropuerto(string ida, string vuelta, DateTime fecha)
+        {
+            return new Vuelo()
+            {
+                Origen = AeropuertoContainer.BuscarNombre(ida),
+                Destino = AeropuertoContainer.BuscarNombre(vuelta),
+                Fecha = fecha
+            };
         }
     }
 }

@@ -210,6 +210,7 @@
             this.Controls.Add(this.textBoxLugar);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AeropuertoPanel";
             this.Text = "AeropuertoPanel";
             this.Load += new System.EventHandler(this.AeropuertoPanel_Load);

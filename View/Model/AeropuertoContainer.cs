@@ -44,5 +44,13 @@ namespace ViewAeropuerto.Model
                 aeropuertosCount++;
             }
         }
+        public static Aeropuerto BuscarNombre(string nombre)
+        {
+            if (nombre != null)
+            {
+                return aeropuertos.FirstOrDefault(aeropuerto => aeropuerto.Lugar == nombre) ?? new Aeropuerto();
+            }
+            return new Aeropuerto();
+        }
     }
 }

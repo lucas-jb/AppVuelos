@@ -30,6 +30,7 @@ namespace ViewAeropuerto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioVuelo));
             this.monthCalendarIda = new System.Windows.Forms.MonthCalendar();
             this.monthCalendarVuelta = new System.Windows.Forms.MonthCalendar();
             this.btComprar = new System.Windows.Forms.Button();
@@ -49,6 +50,8 @@ namespace ViewAeropuerto
             this.labeldatos1 = new System.Windows.Forms.Label();
             this.labeldatos2 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // monthCalendarIda
@@ -272,12 +275,23 @@ namespace ViewAeropuerto
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(525, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(191, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormularioVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(724, 607);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.labeldatos2);
             this.Controls.Add(this.labeldatos1);
@@ -298,8 +312,10 @@ namespace ViewAeropuerto
             this.Controls.Add(this.monthCalendarVuelta);
             this.Controls.Add(this.monthCalendarIda);
             this.ForeColor = System.Drawing.SystemColors.Info;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormularioVuelo";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +342,6 @@ namespace ViewAeropuerto
         private Label labeldatos1;
         private Label labeldatos2;
         private Button btnSalir;
+        private PictureBox pictureBox1;
     }
 }
