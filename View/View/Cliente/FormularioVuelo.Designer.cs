@@ -194,7 +194,7 @@ namespace ViewAeropuerto
             this.labelFechaIda.AutoSize = true;
             this.labelFechaIda.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFechaIda.ForeColor = System.Drawing.SystemColors.Info;
-            this.labelFechaIda.Location = new System.Drawing.Point(351, 252);
+            this.labelFechaIda.Location = new System.Drawing.Point(344, 245);
             this.labelFechaIda.Name = "labelFechaIda";
             this.labelFechaIda.Size = new System.Drawing.Size(103, 14);
             this.labelFechaIda.TabIndex = 10;
@@ -205,7 +205,7 @@ namespace ViewAeropuerto
             this.labelFechaVuelta.AutoSize = true;
             this.labelFechaVuelta.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFechaVuelta.ForeColor = System.Drawing.SystemColors.Info;
-            this.labelFechaVuelta.Location = new System.Drawing.Point(351, 266);
+            this.labelFechaVuelta.Location = new System.Drawing.Point(344, 264);
             this.labelFechaVuelta.Name = "labelFechaVuelta";
             this.labelFechaVuelta.Size = new System.Drawing.Size(121, 14);
             this.labelFechaVuelta.TabIndex = 11;
@@ -230,7 +230,7 @@ namespace ViewAeropuerto
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(438, 251);
+            this.label3.Location = new System.Drawing.Point(471, 245);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 14;
@@ -238,7 +238,7 @@ namespace ViewAeropuerto
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(438, 269);
+            this.label4.Location = new System.Drawing.Point(471, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 15);
             this.label4.TabIndex = 15;

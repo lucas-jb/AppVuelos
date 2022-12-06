@@ -11,11 +11,13 @@ namespace ViewAeropuerto
         private DateTime? fechaVuelta = null;
         private ComprarBillete formdatos;
         public ClientMenu menu;
+        private bool isSoloIda = false;
 
         public FormularioVuelo(ClientMenu menu)
         {
             InitializeComponent();
             var fecha = DateTime.Now.Date;
+            fechaIda = fecha;
             label3.Text = fecha.ToString();
             formdatos = new ComprarBillete(this);
             formdatos.Hide();
@@ -23,8 +25,8 @@ namespace ViewAeropuerto
             this.menu = menu;
             comboBoxOrigen.Items.Clear();
             comboBoxDestino.Items.Clear();
-            this.comboBoxOrigen.Items.AddRange(Vuelo.lugares.ToArray());
-            this.comboBoxDestino.Items.AddRange(Vuelo.lugares.ToArray());
+            this.comboBoxOrigen.Items.AddRange(AeropuertoContainer.DameLista().ToArray());
+            this.comboBoxDestino.Items.AddRange(AeropuertoContainer.DameLista().ToArray());
         }
 
         private void btSelectVuelta_Click(object sender, EventArgs e)
@@ -36,12 +38,18 @@ namespace ViewAeropuerto
                 btSelectVuelta.Text = "Seleccionar vuelta";
                 fechaVuelta = null;
                 label4.Text = string.Empty;
+                labelFechaVuelta.Visible = false;
+                isSoloIda = true;
+
+
             }
             else
             {
                 monthCalendarVuelta.Show();
                 monthCalendarVuelta.Enabled = true;
                 btSelectVuelta.Text = "No seleccionar vuelta";
+                labelFechaVuelta.Visible = true;
+                isSoloIda = false;
             }
         }
 
@@ -50,7 +58,7 @@ namespace ViewAeropuerto
             comboBoxDestino.SelectedIndex=-1;
             label2.Text = string.Empty;
             comboBoxDestino.Items.Clear();
-            this.comboBoxDestino.Items.AddRange(Vuelo.lugares.ToArray());
+            this.comboBoxDestino.Items.AddRange(AeropuertoContainer.DameLista().ToArray());
             int index = comboBoxOrigen.SelectedIndex;
             comboBoxDestino.Enabled = true;
             comboBoxDestino.Items.RemoveAt(index);
@@ -102,14 +110,14 @@ namespace ViewAeropuerto
 
         private void btComprar_Click(object sender, EventArgs e)
         {
-            if (Checkear())
+            if ((Checkear() && CheckearSoloIda()) || (!Checkear() && !CheckearSoloIda()))
             {
                 if (Message1())
                 {
                     formdatos.ClearDatos();
-                    MessageBox.Show(datoOrigen + " a " + datoDestino + Environment.NewLine + "del " + fechaIda + " al " + fechaVuelta, "Reservado");
-                    if (fechaIda != null)
+                    if (!isSoloIda)
                     {
+                        MessageBox.Show(datoOrigen + " a " + datoDestino + Environment.NewLine + "del " + fechaIda + " al " + fechaVuelta, "Reservado");
                         var vueloIda = new Vuelo()
                         {
                             Origen = new Aeropuerto() { Lugar = datoOrigen },
@@ -117,9 +125,6 @@ namespace ViewAeropuerto
                             Fecha = fechaIda ?? DateTime.Now
                         };
                         formdatos.vueloIda = vueloIda;
-                    }
-                    if (fechaVuelta != null)
-                    {
                         var vueloVuelta = new Vuelo()
                         {
                             Origen = new Aeropuerto() { Lugar = datoDestino },
@@ -128,13 +133,24 @@ namespace ViewAeropuerto
                         };
                         formdatos.vueloVuelta = vueloVuelta;
                     }
+                    else
+                    {
+                        MessageBox.Show("Viaje desde " + datoOrigen + " el día " + fechaIda, "Reservado");
+                        var vueloIda = new Vuelo()
+                        {
+                            Origen = new Aeropuerto() { Lugar = datoOrigen },
+                            Destino = new Aeropuerto() { Lugar = datoDestino },
+                            Fecha = fechaIda ?? DateTime.Now
+                        };
+                        formdatos.vueloIda = vueloIda;
+                        formdatos.vueloVuelta = null;
+                    }
                     formdatos.Actualizar();
                     formdatos.CheckearCampos();
                     formdatos.ShowDialog();
                     labeldatos1.Show();
 
                     labeldatos2.Text = formdatos.GenerarBillete().MostrarBillete();
-
                 }
                 else
                 {
@@ -156,17 +172,20 @@ namespace ViewAeropuerto
         }
         private bool Checkear()
         {
-            if(fechaIda != null && datoOrigen != string.Empty && datoDestino != string.Empty)
+            if(fechaIda != null && datoOrigen != string.Empty && fechaVuelta != null && datoDestino != string.Empty)
             {
-                if(monthCalendarVuelta.Enabled && fechaVuelta == null)
-                {
-                    return false;
-                }
                 return true;
             }
             return false;
         }
-
+        private bool CheckearSoloIda()
+        {
+            if (fechaIda != null && datoOrigen != string.Empty && isSoloIda && datoDestino != string.Empty)
+            {
+                return false;
+            }
+            return true;
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             menu.Show();

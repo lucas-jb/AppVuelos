@@ -46,6 +46,8 @@
             this.dateTimePickerOrigen = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDestino = new System.Windows.Forms.DateTimePicker();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -258,12 +260,35 @@
             this.pictureBox5.TabIndex = 47;
             this.pictureBox5.TabStop = false;
             // 
+            // textBoxBusqueda
+            // 
+            this.textBoxBusqueda.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxBusqueda.Location = new System.Drawing.Point(33, 483);
+            this.textBoxBusqueda.Name = "textBoxBusqueda";
+            this.textBoxBusqueda.Size = new System.Drawing.Size(100, 27);
+            this.textBoxBusqueda.TabIndex = 48;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnBuscar.Location = new System.Drawing.Point(139, 475);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(90, 41);
+            this.btnBuscar.TabIndex = 49;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // BilletePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(789, 543);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.textBoxBusqueda);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dateTimePickerDestino);
             this.Controls.Add(this.dateTimePickerOrigen);
@@ -315,5 +340,7 @@
         private DateTimePicker dateTimePickerOrigen;
         private DateTimePicker dateTimePickerDestino;
         private PictureBox pictureBox5;
+        private TextBox textBoxBusqueda;
+        private Button btnBuscar;
     }
 }

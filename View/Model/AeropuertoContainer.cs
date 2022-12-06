@@ -21,6 +21,16 @@ namespace ViewAeropuerto.Model
             "Doha (Qatar)",
             "Londres (Reino Unido)"
         };
+
+        public static List<string> DameLista()
+        {
+            List<string> lista = new();
+            foreach (Aeropuerto a in aeropuertos)
+            {
+                lista.Add(a.Lugar);
+            }
+            return lista;
+        }
         public static void BuildAeropuertoContainer()
         {
             for (int i = 0; i < 8; i++)

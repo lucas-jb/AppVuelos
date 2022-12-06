@@ -26,27 +26,20 @@ namespace ViewAeropuerto
         }
         public void Actualizar()
         {
-            if(vueloIda != null)
+            if (vueloVuelta != null)
             {
                 this.textBoxOrigen.Text = vueloIda.Origen.Lugar;
                 this.textBoxDestino.Text = vueloIda.Destino.Lugar;
                 this.textBoxFI.Text = vueloIda.Fecha.ToString();
-            }
-            else
-            {
-                this.textBoxOrigen.Text = string.Empty;
-                this.textBoxDestino.Text = string.Empty;
-                this.textBoxFI.Text = string.Empty;
-            }
-            if(vueloVuelta != null)
-            {
                 this.textBoxFV.Text = vueloVuelta.Fecha.ToString();
             }
             else
             {
-                this.textBoxFV.Text = string.Empty;
-            }
-            
+                this.textBoxOrigen.Text = vueloIda.Origen.Lugar;
+                this.textBoxDestino.Text = vueloIda.Destino.Lugar;
+                this.textBoxFI.Text = vueloIda.Fecha.ToString();
+                this.textBoxFV.Text = "Viaje solo de ida.";
+            }           
         }
         public void ClearDatos()
         {

@@ -20,6 +20,10 @@ namespace ViewAeropuerto.View
             AeropuertoContainer.BuildAeropuertoContainer();
             PersonaContainer.BuildPersonaContainer();
             InitializeComponent();
+            this.textBox1.Text = 
+                "Atención! Credenciales de prueba:" + Environment.NewLine +
+                "Menu Admin -> admin  admin" + Environment.NewLine +
+                "Menu Cliente -> user  user";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
