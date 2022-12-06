@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estadisticas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,7 @@ namespace View.View.Administrador
 
         private void btnVerBilletes_Click(object sender, EventArgs e)
         {
-            var verbilletes = new VerBilletes(this);
+            var verbilletes = new Stats(this);
             verbilletes.Show();
             this.Hide();
         }

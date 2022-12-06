@@ -1,6 +1,6 @@
-﻿namespace View.View.Administrador
+﻿namespace Estadisticas
 {
-    partial class VerBilletes
+    partial class Stats
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.btnSalir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(640, 375);
+            this.btnSalir.Location = new System.Drawing.Point(556, 287);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(148, 63);
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // VerBilletes
+            // Stats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
-            this.Name = "VerBilletes";
-            this.Text = "VerBilletes";
+            this.Name = "Stats";
+            this.Text = "Stats";
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Button btnSalir;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

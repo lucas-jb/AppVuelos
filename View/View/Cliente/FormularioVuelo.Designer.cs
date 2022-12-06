@@ -51,6 +51,7 @@
             // 
             // monthCalendarIda
             // 
+            this.monthCalendarIda.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.monthCalendarIda.Location = new System.Drawing.Point(45, 78);
             this.monthCalendarIda.MinDate = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
             this.monthCalendarIda.Name = "monthCalendarIda";
@@ -59,6 +60,7 @@
             // 
             // monthCalendarVuelta
             // 
+            this.monthCalendarVuelta.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.monthCalendarVuelta.Location = new System.Drawing.Point(288, 78);
             this.monthCalendarVuelta.MinDate = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
             this.monthCalendarVuelta.Name = "monthCalendarVuelta";
@@ -67,6 +69,8 @@
             // 
             // btComprar
             // 
+            this.btComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btComprar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btComprar.Location = new System.Drawing.Point(45, 301);
             this.btComprar.Name = "btComprar";
             this.btComprar.Size = new System.Drawing.Size(425, 63);
@@ -78,6 +82,8 @@
             // comboBoxOrigen
             // 
             this.comboBoxOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxOrigen.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxOrigen.FormattingEnabled = true;
             this.comboBoxOrigen.Items.AddRange(new object[] {
             "Dubai",
@@ -89,7 +95,7 @@
             "Londres"});
             this.comboBoxOrigen.Location = new System.Drawing.Point(54, 28);
             this.comboBoxOrigen.Name = "comboBoxOrigen";
-            this.comboBoxOrigen.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxOrigen.Size = new System.Drawing.Size(121, 27);
             this.comboBoxOrigen.TabIndex = 3;
             this.comboBoxOrigen.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrigen_SelectedIndexChanged);
             // 
@@ -97,6 +103,8 @@
             // 
             this.comboBoxDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDestino.Enabled = false;
+            this.comboBoxDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxDestino.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDestino.FormattingEnabled = true;
             this.comboBoxDestino.Items.AddRange(new object[] {
             "Dubai",
@@ -108,15 +116,17 @@
             "Londres"});
             this.comboBoxDestino.Location = new System.Drawing.Point(199, 28);
             this.comboBoxDestino.Name = "comboBoxDestino";
-            this.comboBoxDestino.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxDestino.Size = new System.Drawing.Size(121, 27);
             this.comboBoxDestino.TabIndex = 4;
             this.comboBoxDestino.SelectedIndexChanged += new System.EventHandler(this.comboBoxDestino_SelectedIndexChanged);
             // 
             // btSelectVuelta
             // 
+            this.btSelectVuelta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSelectVuelta.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btSelectVuelta.Location = new System.Drawing.Point(330, 27);
             this.btSelectVuelta.Name = "btSelectVuelta";
-            this.btSelectVuelta.Size = new System.Drawing.Size(140, 23);
+            this.btSelectVuelta.Size = new System.Drawing.Size(140, 28);
             this.btSelectVuelta.TabIndex = 5;
             this.btSelectVuelta.Text = "No seleccionar vuelta";
             this.btSelectVuelta.UseVisualStyleBackColor = true;
@@ -143,36 +153,40 @@
             // labelVueloOrigen
             // 
             this.labelVueloOrigen.AutoSize = true;
-            this.labelVueloOrigen.Location = new System.Drawing.Point(45, 249);
+            this.labelVueloOrigen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelVueloOrigen.Location = new System.Drawing.Point(40, 249);
             this.labelVueloOrigen.Name = "labelVueloOrigen";
-            this.labelVueloOrigen.Size = new System.Drawing.Size(165, 15);
+            this.labelVueloOrigen.Size = new System.Drawing.Size(171, 14);
             this.labelVueloOrigen.TabIndex = 8;
             this.labelVueloOrigen.Text = "Vuelo de origen seleccionado:";
             // 
             // labelVueloDestino
             // 
             this.labelVueloDestino.AutoSize = true;
+            this.labelVueloDestino.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelVueloDestino.Location = new System.Drawing.Point(40, 264);
             this.labelVueloDestino.Name = "labelVueloDestino";
-            this.labelVueloDestino.Size = new System.Drawing.Size(170, 15);
+            this.labelVueloDestino.Size = new System.Drawing.Size(177, 14);
             this.labelVueloDestino.TabIndex = 9;
             this.labelVueloDestino.Text = "Vuelo de destino seleccionado:";
             // 
             // labelFechaIda
             // 
             this.labelFechaIda.AutoSize = true;
+            this.labelFechaIda.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFechaIda.Location = new System.Drawing.Point(316, 249);
             this.labelFechaIda.Name = "labelFechaIda";
-            this.labelFechaIda.Size = new System.Drawing.Size(99, 15);
+            this.labelFechaIda.Size = new System.Drawing.Size(103, 14);
             this.labelFechaIda.TabIndex = 10;
             this.labelFechaIda.Text = "Con fecha de ida:";
             // 
             // labelFechaVuelta
             // 
             this.labelFechaVuelta.AutoSize = true;
+            this.labelFechaVuelta.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFechaVuelta.Location = new System.Drawing.Point(300, 264);
             this.labelFechaVuelta.Name = "labelFechaVuelta";
-            this.labelFechaVuelta.Size = new System.Drawing.Size(115, 15);
+            this.labelFechaVuelta.Size = new System.Drawing.Size(121, 14);
             this.labelFechaVuelta.TabIndex = 11;
             this.labelFechaVuelta.Text = "Con fecha de vuelta:";
             // 
@@ -211,9 +225,10 @@
             // labeldatos1
             // 
             this.labeldatos1.AutoSize = true;
+            this.labeldatos1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labeldatos1.Location = new System.Drawing.Point(45, 382);
             this.labeldatos1.Name = "labeldatos1";
-            this.labeldatos1.Size = new System.Drawing.Size(180, 15);
+            this.labeldatos1.Size = new System.Drawing.Size(183, 14);
             this.labeldatos1.TabIndex = 16;
             this.labeldatos1.Text = "Compra realizada con éxito para:";
             // 
@@ -227,15 +242,17 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(428, 572);
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(428, 562);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 33);
             this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Form1
+            // FormularioVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,7 +276,7 @@
             this.Controls.Add(this.btComprar);
             this.Controls.Add(this.monthCalendarVuelta);
             this.Controls.Add(this.monthCalendarIda);
-            this.Name = "Form1";
+            this.Name = "FormularioVuelo";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -53,9 +53,11 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.Location = new System.Drawing.Point(12, 86);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(188, 23);
+            this.btnLogin.Size = new System.Drawing.Size(188, 36);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Iniciar sesión";
             this.btnLogin.UseVisualStyleBackColor = true;

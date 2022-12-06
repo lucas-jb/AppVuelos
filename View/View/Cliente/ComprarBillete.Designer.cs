@@ -62,9 +62,10 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBoxOrigen);
             this.groupBox1.Controls.Add(this.textBoxDestino);
-            this.groupBox1.Location = new System.Drawing.Point(380, 26);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(366, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(323, 236);
+            this.groupBox1.Size = new System.Drawing.Size(337, 236);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos vuelo";
@@ -72,69 +73,73 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 183);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(13, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 15);
+            this.label5.Size = new System.Drawing.Size(96, 19);
             this.label5.TabIndex = 11;
             this.label5.Text = "Fecha vuelta";
             // 
             // textBoxFV
             // 
-            this.textBoxFV.Location = new System.Drawing.Point(101, 180);
+            this.textBoxFV.Location = new System.Drawing.Point(115, 180);
             this.textBoxFV.Name = "textBoxFV";
             this.textBoxFV.ReadOnly = true;
-            this.textBoxFV.Size = new System.Drawing.Size(216, 23);
+            this.textBoxFV.Size = new System.Drawing.Size(216, 22);
             this.textBoxFV.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 132);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(34, 129);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 15);
+            this.label6.Size = new System.Drawing.Size(75, 19);
             this.label6.TabIndex = 10;
             this.label6.Text = "Fecha ida";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 85);
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(47, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 15);
+            this.label7.Size = new System.Drawing.Size(62, 19);
             this.label7.TabIndex = 9;
             this.label7.Text = "Destino";
             // 
             // textBoxFI
             // 
-            this.textBoxFI.Location = new System.Drawing.Point(101, 129);
+            this.textBoxFI.Location = new System.Drawing.Point(115, 129);
             this.textBoxFI.Name = "textBoxFI";
             this.textBoxFI.ReadOnly = true;
-            this.textBoxFI.Size = new System.Drawing.Size(216, 23);
+            this.textBoxFI.Size = new System.Drawing.Size(216, 22);
             this.textBoxFI.TabIndex = 6;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 40);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(52, 39);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 15);
+            this.label8.Size = new System.Drawing.Size(57, 19);
             this.label8.TabIndex = 8;
             this.label8.Text = "Origen";
             // 
             // textBoxOrigen
             // 
-            this.textBoxOrigen.Location = new System.Drawing.Point(101, 35);
+            this.textBoxOrigen.Location = new System.Drawing.Point(115, 35);
             this.textBoxOrigen.Name = "textBoxOrigen";
             this.textBoxOrigen.ReadOnly = true;
-            this.textBoxOrigen.Size = new System.Drawing.Size(216, 23);
+            this.textBoxOrigen.Size = new System.Drawing.Size(216, 22);
             this.textBoxOrigen.TabIndex = 4;
             // 
             // textBoxDestino
             // 
-            this.textBoxDestino.Location = new System.Drawing.Point(101, 82);
+            this.textBoxDestino.Location = new System.Drawing.Point(115, 82);
             this.textBoxDestino.Name = "textBoxDestino";
             this.textBoxDestino.ReadOnly = true;
-            this.textBoxDestino.Size = new System.Drawing.Size(216, 23);
+            this.textBoxDestino.Size = new System.Drawing.Size(216, 22);
             this.textBoxDestino.TabIndex = 5;
             // 
             // groupBox2
@@ -147,6 +152,7 @@
             this.groupBox2.Controls.Add(this.textBoxDireccion);
             this.groupBox2.Controls.Add(this.textBoxApellido);
             this.groupBox2.Controls.Add(this.textBoxNombre);
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(21, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(323, 236);
@@ -157,36 +163,40 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 183);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(56, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 15);
+            this.label4.Size = new System.Drawing.Size(37, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "DNI";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 132);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(19, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.Size = new System.Drawing.Size(74, 19);
             this.label3.TabIndex = 6;
             this.label3.Text = "Dirección";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 85);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(26, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 15);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Apellido";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 40);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(26, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.Size = new System.Drawing.Size(66, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nombre";
             // 
@@ -194,7 +204,7 @@
             // 
             this.textBoxDNI.Location = new System.Drawing.Point(101, 180);
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(216, 23);
+            this.textBoxDNI.Size = new System.Drawing.Size(216, 22);
             this.textBoxDNI.TabIndex = 3;
             this.textBoxDNI.TextChanged += new System.EventHandler(this.textBoxDNI_TextChanged);
             // 
@@ -202,7 +212,7 @@
             // 
             this.textBoxDireccion.Location = new System.Drawing.Point(101, 129);
             this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(216, 23);
+            this.textBoxDireccion.Size = new System.Drawing.Size(216, 22);
             this.textBoxDireccion.TabIndex = 2;
             this.textBoxDireccion.TextChanged += new System.EventHandler(this.textBoxDireccion_TextChanged);
             // 
@@ -210,7 +220,7 @@
             // 
             this.textBoxApellido.Location = new System.Drawing.Point(101, 82);
             this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(216, 23);
+            this.textBoxApellido.Size = new System.Drawing.Size(216, 22);
             this.textBoxApellido.TabIndex = 1;
             this.textBoxApellido.TextChanged += new System.EventHandler(this.textBoxApellido_TextChanged);
             // 
@@ -218,12 +228,14 @@
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(101, 35);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(216, 23);
+            this.textBoxNombre.Size = new System.Drawing.Size(216, 22);
             this.textBoxNombre.TabIndex = 0;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // btCompra
             // 
+            this.btCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCompra.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btCompra.Location = new System.Drawing.Point(21, 280);
             this.btCompra.Name = "btCompra";
             this.btCompra.Size = new System.Drawing.Size(573, 53);
@@ -234,6 +246,8 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalir.Location = new System.Drawing.Point(600, 280);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 53);
