@@ -27,27 +27,27 @@ namespace View.View.Administrador
         {
             if (this.textBoxName.Text == string.Empty)
             {
-                this.textBoxName.BackColor = Color.Red;
+                this.pictureBox1.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxName.BackColor = Color.Green;
+                this.pictureBox1.Image = this.pictureBox1.InitialImage;
             }
             if (this.textBoxLugar.Text == string.Empty)
             {
-                this.textBoxLugar.BackColor = Color.Red;
+                this.pictureBox2.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxLugar.BackColor = Color.Green;
+                this.pictureBox2.Image = this.pictureBox1.InitialImage;
             }
             if (this.textBoxDescription.Text == string.Empty)
             {
-                this.textBoxDescription.BackColor = Color.Red;
+                this.pictureBox3.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxDescription.BackColor = Color.Green;
+                this.pictureBox3.Image = this.pictureBox1.InitialImage;
             }
             return true;
         }

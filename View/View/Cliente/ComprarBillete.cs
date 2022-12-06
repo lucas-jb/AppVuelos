@@ -98,35 +98,35 @@ namespace View
         {
             if (this.textBoxNombre.Text == string.Empty)
             {
-                this.textBoxNombre.BackColor = Color.Red;
+                this.pictureBox1.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxNombre.BackColor = Color.Green;
+                this.pictureBox1.Image = this.pictureBox1.InitialImage;
             }
             if(this.textBoxApellido.Text == string.Empty)
             {
-                this.textBoxApellido.BackColor = Color.Red;
+                this.pictureBox2.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxApellido.BackColor = Color.Green;
+                this.pictureBox2.Image = this.pictureBox1.InitialImage;
             }
             if (this.textBoxDireccion.Text == string.Empty)
             {
-                this.textBoxDireccion.BackColor = Color.Red;
+                this.pictureBox3.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxDireccion.BackColor = Color.Green;
+                this.pictureBox3.Image = this.pictureBox1.InitialImage;
             }
             if (this.textBoxDNI.Text == string.Empty)
             {
-                this.textBoxDNI.BackColor = Color.Red;
+                this.pictureBox4.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxDNI.BackColor = Color.Green;
+                this.pictureBox4.Image = this.pictureBox1.InitialImage;
             }
             return true;
         }

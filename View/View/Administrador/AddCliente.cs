@@ -46,35 +46,35 @@ namespace View.View.Administrador
         {
             if (this.textBoxName.Text == string.Empty)
             {
-                this.textBoxName.BackColor = Color.Red;
+                this.pictureBox1.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxName.BackColor = Color.Green;
+                this.pictureBox1.Image = this.pictureBox1.InitialImage;
             }
             if (this.textBoxSurname.Text == string.Empty)
             {
-                this.textBoxSurname.BackColor = Color.Red;
+                this.pictureBox2.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxSurname.BackColor = Color.Green;
+                this.pictureBox2.Image = this.pictureBox1.InitialImage;
             }
             if (this.textBoxAdress.Text == string.Empty)
             {
-                this.textBoxAdress.BackColor = Color.Red;
+                this.pictureBox3.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxAdress.BackColor = Color.Green;
+                this.pictureBox3.Image = this.pictureBox1.InitialImage;
             }
             if (this.textBoxDni.Text == string.Empty)
             {
-                this.textBoxDni.BackColor = Color.Red;
+                this.pictureBox4.Image = this.pictureBox1.ErrorImage;
             }
             else
             {
-                this.textBoxDni.BackColor = Color.Green;
+                this.pictureBox4.Image = this.pictureBox1.InitialImage;
             }
             return true;
         }
