@@ -1,4 +1,4 @@
-﻿namespace View.View.Administrador
+﻿namespace ViewAeropuerto.View.Administrador
 {
     partial class AeropuertoPanel
     {

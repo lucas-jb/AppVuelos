@@ -1,4 +1,4 @@
-﻿namespace View.View.Cliente
+﻿namespace ViewAeropuerto.View.Cliente
 {
     partial class ClientMenu
     {

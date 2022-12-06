@@ -1,4 +1,4 @@
-﻿namespace View.View.Administrador
+﻿namespace ViewAeropuerto.View.Administrador
 {
     partial class AdminMenu
     {
@@ -87,7 +87,7 @@
             this.btnVerBilletes.Name = "btnVerBilletes";
             this.btnVerBilletes.Size = new System.Drawing.Size(206, 32);
             this.btnVerBilletes.TabIndex = 2;
-            this.btnVerBilletes.Text = "Ver billetes";
+            this.btnVerBilletes.Text = "Ver estadísticas";
             this.btnVerBilletes.UseVisualStyleBackColor = true;
             this.btnVerBilletes.Click += new System.EventHandler(this.btnVerBilletes_Click);
             // 

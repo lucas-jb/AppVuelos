@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using View.Model;
-using View.View.Administrador;
-using View.View.Cliente;
+using ViewAeropuerto.Model;
+using ViewAeropuerto.View.Administrador;
+using ViewAeropuerto.View.Cliente;
 
-namespace View.View
+namespace ViewAeropuerto.View
 {
     public partial class Login : Form
     {

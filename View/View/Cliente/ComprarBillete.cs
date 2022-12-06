@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using View.Model;
-using View.View.Cliente;
+using ViewAeropuerto.Model;
+using ViewAeropuerto.View.Cliente;
 
-namespace View
+namespace ViewAeropuerto
 {
     public partial class ComprarBillete : Form
     {

@@ -1,7 +1,7 @@
-using View.View;
-using View.View.Administrador;
+using ViewAeropuerto.View;
+using ViewAeropuerto.View.Administrador;
 
-namespace View
+namespace ViewAeropuerto
 {
     internal static class Program
     {

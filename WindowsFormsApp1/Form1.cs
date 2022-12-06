@@ -8,21 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Estadisticas
+namespace WindowsFormsApp1
 {
-    public partial class Stats : Form
+    public partial class Form1 : Form
     {
-        private Form menu;
-        public Stats(Form menu)
+        public Form1()
         {
-            this.menu = menu;
             InitializeComponent();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            menu.Show();
-            this.Close();
         }
     }
 }

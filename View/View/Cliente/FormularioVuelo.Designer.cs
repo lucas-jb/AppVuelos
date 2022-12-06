@@ -1,4 +1,4 @@
-﻿namespace View
+﻿namespace ViewAeropuerto
 {
     partial class FormularioVuelo
     {

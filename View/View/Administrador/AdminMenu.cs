@@ -1,5 +1,4 @@
-﻿using Estadisticas;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace View.View.Administrador
+namespace ViewAeropuerto.View.Administrador
 {
     public partial class AdminMenu : Form
     {
@@ -35,9 +34,7 @@ namespace View.View.Administrador
 
         private void btnVerBilletes_Click(object sender, EventArgs e)
         {
-            var verbilletes = new Stats(this);
-            verbilletes.Show();
-            this.Hide();
+            MessageBox.Show("Esta funcionalidad no está disponible en la versión de tu aplicación. Reinicia la App para ver las estadísticas de billetes.", "Error");
         }
 
         private void btnAeropuerto_Click(object sender, EventArgs e)

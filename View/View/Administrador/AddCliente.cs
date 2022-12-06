@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using View.Model;
+using ViewAeropuerto.Model;
 
-namespace View.View.Administrador
+namespace ViewAeropuerto.View.Administrador
 {
     public partial class AddCliente : Form
     {
