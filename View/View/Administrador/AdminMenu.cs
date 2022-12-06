@@ -39,5 +39,12 @@ namespace View.View.Administrador
             verbilletes.Show();
             this.Hide();
         }
+
+        private void btnAeropuerto_Click(object sender, EventArgs e)
+        {
+            var addaeropuerto = new AeropuertoPanel(this);
+            addaeropuerto.Show();
+            this.Hide();
+        }
     }
 }

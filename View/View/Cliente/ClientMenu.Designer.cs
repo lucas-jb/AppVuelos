@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientMenu));
             this.btn = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -42,38 +43,38 @@
             // 
             // btn
             // 
-            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn.Location = new System.Drawing.Point(24, 22);
+            this.btn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn.ForeColor = System.Drawing.SystemColors.Info;
+            this.btn.Location = new System.Drawing.Point(24, 33);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(210, 34);
             this.btn.TabIndex = 0;
             this.btn.Text = "Comprar billete";
-            this.btn.UseVisualStyleBackColor = true;
+            this.btn.UseVisualStyleBackColor = false;
             this.btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnHistorico
             // 
-            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorico.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHistorico.Location = new System.Drawing.Point(24, 208);
+            this.btnHistorico.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnHistorico.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnHistorico.Location = new System.Drawing.Point(24, 188);
             this.btnHistorico.Name = "btnHistorico";
             this.btnHistorico.Size = new System.Drawing.Size(210, 33);
             this.btnHistorico.TabIndex = 1;
             this.btnHistorico.Text = "Ver historico";
-            this.btnHistorico.UseVisualStyleBackColor = true;
+            this.btnHistorico.UseVisualStyleBackColor = false;
             this.btnHistorico.Click += new System.EventHandler(this.btnHistorico_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(24, 247);
+            this.btnSalir.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnSalir.Location = new System.Drawing.Point(24, 228);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(210, 34);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir de la aplicación";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // groupBox1
@@ -97,14 +98,14 @@
             // 
             // btnVerVuelo
             // 
-            this.btnVerVuelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerVuelo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVerVuelo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnVerVuelo.ForeColor = System.Drawing.SystemColors.Info;
             this.btnVerVuelo.Location = new System.Drawing.Point(22, 33);
             this.btnVerVuelo.Name = "btnVerVuelo";
             this.btnVerVuelo.Size = new System.Drawing.Size(173, 36);
             this.btnVerVuelo.TabIndex = 4;
             this.btnVerVuelo.Text = "Ver mi vuelo";
-            this.btnVerVuelo.UseVisualStyleBackColor = true;
+            this.btnVerVuelo.UseVisualStyleBackColor = false;
             this.btnVerVuelo.Click += new System.EventHandler(this.btnVerVuelo_Click);
             // 
             // groupBox2
@@ -130,14 +131,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 303);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(531, 263);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.btn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientMenu";
-            this.Text = "ClientMenu";
+            this.Text = "Menú cliente";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

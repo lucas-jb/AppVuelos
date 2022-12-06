@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
+            this.btnAeropuerto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnVerBilletes = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAeropuerto
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -148,9 +149,10 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnVerBilletes);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAeropuerto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMenu";
-            this.Text = "AdminMenu";
+            this.Text = "Menú administrador";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -159,7 +161,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnAeropuerto;
         private Button button2;
         private Button button3;
         private Button btnVerBilletes;

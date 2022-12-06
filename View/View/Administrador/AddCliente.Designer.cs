@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCliente));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
@@ -166,6 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(701, 484);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDelete);
@@ -179,8 +181,9 @@
             this.Controls.Add(this.textBoxSurname);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCliente";
-            this.Text = "AddCliente";
+            this.Text = "Añadir cliente";
             this.Load += new System.EventHandler(this.AddCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
