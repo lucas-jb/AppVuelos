@@ -67,7 +67,7 @@ namespace ViewAeropuerto.View.Administrador
             return false;
         }
 
-        private void MostrarClientes()
+        private void MostrarAeropuertos()
         {
             List<Aeropuerto> lista = AeropuertoContainer.aeropuertos;
             bs.DataSource = typeof(Aeropuerto);
@@ -90,8 +90,9 @@ namespace ViewAeropuerto.View.Administrador
                     Lugar = textBoxLugar.Text,
                     Descripcion = textBoxDescription.Text,
                 };
+                AeropuertoContainer.AddAeropuerto(aeropuerto);
                 AeropuertoContainer.aeropuertos.Add(aeropuerto);
-                MostrarClientes();
+                MostrarAeropuertos();
                 ClearDatos();
             }
         }
@@ -132,7 +133,7 @@ namespace ViewAeropuerto.View.Administrador
 
         private void AeropuertoPanel_Load(object sender, EventArgs e)
         {
-            MostrarClientes();
+            MostrarAeropuertos();
         }
 
         private void textBoxName_TextChanged_1(object sender, EventArgs e)

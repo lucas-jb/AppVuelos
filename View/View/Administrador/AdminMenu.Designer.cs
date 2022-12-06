@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
             this.btnAeropuerto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBilletes = new System.Windows.Forms.Button();
             this.btnVerBilletes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,24 +66,25 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnBilletes
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.Info;
-            this.button3.Location = new System.Drawing.Point(30, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 33);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Modificar billetes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBilletes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBilletes.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBilletes.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnBilletes.Location = new System.Drawing.Point(30, 109);
+            this.btnBilletes.Name = "btnBilletes";
+            this.btnBilletes.Size = new System.Drawing.Size(206, 33);
+            this.btnBilletes.TabIndex = 3;
+            this.btnBilletes.Text = "Modificar billetes";
+            this.btnBilletes.UseVisualStyleBackColor = true;
+            this.btnBilletes.Click += new System.EventHandler(this.btnBilletes_Click);
             // 
             // btnVerBilletes
             // 
             this.btnVerBilletes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerBilletes.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnVerBilletes.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnVerBilletes.Location = new System.Drawing.Point(30, 109);
+            this.btnVerBilletes.Location = new System.Drawing.Point(30, 148);
             this.btnVerBilletes.Name = "btnVerBilletes";
             this.btnVerBilletes.Size = new System.Drawing.Size(206, 32);
             this.btnVerBilletes.TabIndex = 2;
@@ -154,7 +155,7 @@
             this.ClientSize = new System.Drawing.Size(271, 369);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnBilletes);
             this.Controls.Add(this.btnVerBilletes);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAeropuerto);
@@ -171,7 +172,7 @@
 
         private Button btnAeropuerto;
         private Button button2;
-        private Button button3;
+        private Button btnBilletes;
         private Button btnVerBilletes;
         private Button btnSalir;
         private GroupBox groupBox1;

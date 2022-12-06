@@ -38,14 +38,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.textBoxLugar = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxOrigen = new System.Windows.Forms.ComboBox();
+            this.comboBoxDestino = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerOrigen = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDestino = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -53,7 +57,7 @@
             this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(349, 80);
+            this.pictureBox3.Location = new System.Drawing.Point(383, 95);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,7 +69,7 @@
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(349, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(383, 57);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +81,7 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(349, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(383, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,31 +93,33 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSalir.Location = new System.Drawing.Point(443, 407);
+            this.btnSalir.Location = new System.Drawing.Point(448, 469);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(154, 52);
             this.btnSalir.TabIndex = 36;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnDelete.Location = new System.Drawing.Point(443, 79);
+            this.btnDelete.Location = new System.Drawing.Point(448, 95);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(154, 52);
             this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnEdit.Location = new System.Drawing.Point(443, 18);
+            this.btnEdit.Location = new System.Drawing.Point(448, 34);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(154, 52);
             this.btnEdit.TabIndex = 34;
@@ -125,71 +131,129 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(45, 60);
+            this.label4.Location = new System.Drawing.Point(39, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 14);
+            this.label4.Size = new System.Drawing.Size(77, 14);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Lugar";
+            this.label4.Text = "Fecha origen";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(13, 98);
+            this.label2.Location = new System.Drawing.Point(68, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 14);
+            this.label2.Size = new System.Drawing.Size(48, 14);
             this.label2.TabIndex = 32;
-            this.label2.Text = "Descripción";
+            this.label2.Text = "Destino";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(31, 21);
+            this.label1.Location = new System.Drawing.Point(73, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 14);
+            this.label1.Size = new System.Drawing.Size(43, 14);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Nombre";
-            // 
-            // textBoxDescription
-            // 
-            this.textBoxDescription.Location = new System.Drawing.Point(88, 95);
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(255, 23);
-            this.textBoxDescription.TabIndex = 30;
-            // 
-            // textBoxLugar
-            // 
-            this.textBoxLugar.Location = new System.Drawing.Point(88, 57);
-            this.textBoxLugar.Name = "textBoxLugar";
-            this.textBoxLugar.Size = new System.Drawing.Size(255, 23);
-            this.textBoxLugar.TabIndex = 29;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Location = new System.Drawing.Point(88, 18);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(255, 23);
-            this.textBoxName.TabIndex = 28;
+            this.label1.Text = "Origen";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 154);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(568, 247);
             this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.ErrorImage")));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.InitialImage")));
+            this.pictureBox4.Location = new System.Drawing.Point(383, 133);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 38);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 42;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.Info;
+            this.label3.Location = new System.Drawing.Point(33, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 14);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Fecha destino";
+            // 
+            // comboBoxOrigen
+            // 
+            this.comboBoxOrigen.FormattingEnabled = true;
+            this.comboBoxOrigen.Items.AddRange(new object[] {
+            "Dubái (EAU)",
+            "Cancún (México)",
+            "Estambul (Turquía)",
+            "Nueva York (USA)",
+            "Miami (USA)",
+            "París (Francia)",
+            "Doha (Qatar)",
+            "Londres (Reino Unido)"});
+            this.comboBoxOrigen.Location = new System.Drawing.Point(122, 30);
+            this.comboBoxOrigen.Name = "comboBoxOrigen";
+            this.comboBoxOrigen.Size = new System.Drawing.Size(255, 23);
+            this.comboBoxOrigen.TabIndex = 43;
+            this.comboBoxOrigen.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrigen_SelectedIndexChanged);
+            // 
+            // comboBoxDestino
+            // 
+            this.comboBoxDestino.FormattingEnabled = true;
+            this.comboBoxDestino.Items.AddRange(new object[] {
+            "Dubái (EAU)",
+            "Cancún (México)",
+            "Estambul (Turquía)",
+            "Nueva York (USA)",
+            "Miami (USA)",
+            "París (Francia)",
+            "Doha (Qatar)",
+            "Londres (Reino Unido)"});
+            this.comboBoxDestino.Location = new System.Drawing.Point(122, 104);
+            this.comboBoxDestino.Name = "comboBoxDestino";
+            this.comboBoxDestino.Size = new System.Drawing.Size(255, 23);
+            this.comboBoxDestino.TabIndex = 44;
+            // 
+            // dateTimePickerOrigen
+            // 
+            this.dateTimePickerOrigen.Location = new System.Drawing.Point(122, 66);
+            this.dateTimePickerOrigen.Name = "dateTimePickerOrigen";
+            this.dateTimePickerOrigen.Size = new System.Drawing.Size(255, 23);
+            this.dateTimePickerOrigen.TabIndex = 45;
+            // 
+            // dateTimePickerDestino
+            // 
+            this.dateTimePickerDestino.Location = new System.Drawing.Point(122, 139);
+            this.dateTimePickerDestino.Name = "dateTimePickerDestino";
+            this.dateTimePickerDestino.Size = new System.Drawing.Size(255, 23);
+            this.dateTimePickerDestino.TabIndex = 46;
             // 
             // BilletePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(614, 471);
+            this.ClientSize = new System.Drawing.Size(614, 543);
+            this.Controls.Add(this.dateTimePickerDestino);
+            this.Controls.Add(this.dateTimePickerOrigen);
+            this.Controls.Add(this.comboBoxDestino);
+            this.Controls.Add(this.comboBoxOrigen);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -199,16 +263,15 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.textBoxLugar);
-            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.dataGridView1);
             this.Name = "BilletePanel";
             this.Text = "BilletePanel";
+            this.Load += new System.EventHandler(this.BilletePanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,9 +288,12 @@
         private Label label4;
         private Label label2;
         private Label label1;
-        private TextBox textBoxDescription;
-        private TextBox textBoxLugar;
-        private TextBox textBoxName;
         private DataGridView dataGridView1;
+        private PictureBox pictureBox4;
+        private Label label3;
+        private ComboBox comboBoxOrigen;
+        private ComboBox comboBoxDestino;
+        private DateTimePicker dateTimePickerOrigen;
+        private DateTimePicker dateTimePickerDestino;
     }
 }

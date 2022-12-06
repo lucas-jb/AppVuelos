@@ -17,6 +17,7 @@ namespace ViewAeropuerto
         public Vuelo? vueloIda = null;
         public Vuelo? vueloVuelta = null;
         private FormularioVuelo menu;
+        public Persona user;
 
         public ComprarBillete(FormularioVuelo menu)
         {
@@ -155,6 +156,13 @@ namespace ViewAeropuerto
         {
             if (RellenadoCheck())
             {
+                Billete billete = new Billete()
+                {
+                    Ida = vueloIda,
+                    Vuelta = vueloVuelta,
+                    Pasajero = menu.menu.user
+                };
+                BilleteContainer.AddBillete(billete);
                 MessageBox.Show("Billenes comprados con éxito", "Comprado");
                 this.Hide();
             }

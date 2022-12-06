@@ -17,6 +17,7 @@ namespace ViewAeropuerto.View
     {
         public Login()
         {
+            AeropuertoContainer.BuildAeropuertoContainer();
             PersonaContainer.BuildPersonaContainer();
             InitializeComponent();
         }
@@ -26,7 +27,7 @@ namespace ViewAeropuerto.View
             if (PersonaContainer.BuscarDni(textBoxUser.Text).CheckPass(textBoxUser.Text, textBoxPass.Text))
             {
                 if (PersonaContainer.BuscarDni(textBoxUser.Text).admin == false){
-                    var menu = new ClientMenu(this)
+                    var menu = new ClientMenu(this, PersonaContainer.BuscarDni(textBoxUser.Text))
                     {
                         clientDni = textBoxUser.Text
                     };

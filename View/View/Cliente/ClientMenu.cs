@@ -15,10 +15,12 @@ namespace ViewAeropuerto.View.Cliente
     {
         public string clientDni = string.Empty;
         private Login login;
-        public ClientMenu(Login login)
+        public Persona user;
+        public ClientMenu(Login login, Persona user)
         {
             InitializeComponent();
             this.login = login;
+            this.user = user;
         }
 
         private void button1_Click(object sender, EventArgs e)

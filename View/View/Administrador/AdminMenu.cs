@@ -50,5 +50,12 @@ namespace ViewAeropuerto.View.Administrador
             addaeropuerto.Show();
             this.Hide();
         }
+
+        private void btnBilletes_Click(object sender, EventArgs e)
+        {
+            var billetePanel = new BilletePanel(this);
+            billetePanel.Show();
+            this.Hide();
+        }
     }
 }

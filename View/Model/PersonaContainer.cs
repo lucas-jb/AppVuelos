@@ -12,7 +12,7 @@ namespace ViewAeropuerto.Model
 
         public static void BuildPersonaContainer()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 8; i++)
             {
                 personas.Add(new Persona()
                 {
@@ -26,19 +26,12 @@ namespace ViewAeropuerto.Model
                 BilleteContainer.
                 billetes.Add(new Billete()
                 {
+                    Id = i,
                     Pasajero = personas[i],
-                    Ida = Vuelo.RandomVuelo(),
-                    Vuelta = Vuelo.RandomVuelo()
+                    Ida = Vuelo.RandomVuelo(i, true),
+                    Vuelta = Vuelo.RandomVuelo(i, false)
                 });
 
-                AeropuertoContainer.
-                aeropuertos.Add(new Aeropuerto
-                {
-                    Id = i,
-                    Nombre = "Aeropuerto"+i,
-                    Lugar = "Lugar"+i,
-                    Descripcion = "Descripción"+i
-                });
             }
             personas.Add(new Persona()
             {

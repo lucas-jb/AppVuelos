@@ -10,7 +10,7 @@ namespace ViewAeropuerto
         private DateTime? fechaIda = null;
         private DateTime? fechaVuelta = null;
         private ComprarBillete formdatos;
-        private ClientMenu menu;
+        public ClientMenu menu;
 
         public FormularioVuelo(ClientMenu menu)
         {
@@ -46,13 +46,7 @@ namespace ViewAeropuerto
             comboBoxDestino.SelectedIndex=-1;
             label2.Text = string.Empty;
             comboBoxDestino.Items.Clear();
-            this.comboBoxDestino.Items.AddRange(new object[] {
-            "Cancún",
-            "Estambul",
-            "Nueva York",
-            "Miami",
-            "París",
-            "Londres"});
+            this.comboBoxDestino.Items.AddRange(Vuelo.lugares.ToArray());
             int index = comboBoxOrigen.SelectedIndex;
             comboBoxDestino.Enabled = true;
             comboBoxDestino.Items.RemoveAt(index);
@@ -124,8 +118,8 @@ namespace ViewAeropuerto
                     {
                         var vueloVuelta = new Vuelo()
                         {
-                            Origen = new Aeropuerto() { Lugar = datoOrigen },
-                            Destino = new Aeropuerto() { Lugar = datoDestino },
+                            Origen = new Aeropuerto() { Lugar = datoDestino },
+                            Destino = new Aeropuerto() { Lugar = datoOrigen },
                             Fecha = fechaVuelta ?? DateTime.Now
                         };
                         formdatos.vueloVuelta = vueloVuelta;

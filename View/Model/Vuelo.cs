@@ -12,7 +12,7 @@ namespace ViewAeropuerto.Model
         public Aeropuerto Destino { get; set; }
         public DateTime Fecha { get; set; }
 
-        private static List<string> lugares = new()
+        public static List<string> lugares = new()
         {
             "Dubái (EAU)",
             "Cancún (México)",
@@ -43,14 +43,27 @@ namespace ViewAeropuerto.Model
                 Descripcion = "Descripción."
             };
         }
-        public static Vuelo RandomVuelo()
+        public static Vuelo RandomVuelo(int i, bool pos)
         {
-            return new Vuelo()
+            if (pos)
             {
-                Origen = RandomAeropuerto(),
-                Destino = RandomAeropuerto(),
-                Fecha = DateTime.Now
-            };
+                return new Vuelo()
+                {
+                    Origen = AeropuertoContainer.aeropuertos[i],
+                    Destino = i != 7 ? AeropuertoContainer.aeropuertos[i + 1] : AeropuertoContainer.aeropuertos[0],
+                    Fecha = DateTime.Now
+                };
+            }
+            else
+            {
+                return new Vuelo()
+                {
+                    Origen = i != 7 ? AeropuertoContainer.aeropuertos[i + 1] : AeropuertoContainer.aeropuertos[0],
+                    Destino = AeropuertoContainer.aeropuertos[i],
+                    Fecha = DateTime.Now
+                };
+            }
+
         }
     }
 }

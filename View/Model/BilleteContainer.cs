@@ -10,6 +10,24 @@ namespace ViewAeropuerto.Model
     {
         public static List<Billete> billetes = new();
 
+        public static bool Exists(int id)
+        {
+            if (billetes.FirstOrDefault(billete => billete.Id == id) != null)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool ModificarBillete(Billete billete)
+        {
+            if (Exists(billete.Id))
+            {
+                billetes.Remove(BuscarId(billete.Id));
+                billetes.Add(billete);
+                return true;
+            }
+            return false;
+        }
         public static Billete BuscarId(int id)
         {
             if (id > 0)
@@ -20,11 +38,11 @@ namespace ViewAeropuerto.Model
         }
         public static string BuscarIdToString(int id)
         {
-            if (id > 0)
+            if (id > 0 && Exists(id))
             {
-                return billetes.FirstOrDefault(billete => billete.Id == id).MostrarBillete() ?? new Billete().MostrarBillete();
+                return billetes.FirstOrDefault(billete => billete.Id == id).MostrarBillete();
             }
-            return new Billete().MostrarBillete();
+            return "No existe el billete.";
         }
         public static List<Billete> BuscarDni(string dni)
         {
@@ -53,8 +71,18 @@ namespace ViewAeropuerto.Model
         {
             if (billete != null)
             {
+                billete.Id = billetes.Count;
                 billetes.Add(billete);
             }
+        }
+        public static bool DeleteBillete(int id)
+        {
+            if (Exists(id))
+            {
+                billetes.Remove(BuscarId(id));
+                return true;
+            }
+            return false;
         }
     }
 }
