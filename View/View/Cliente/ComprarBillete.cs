@@ -27,8 +27,8 @@ namespace View
         {
             if(vueloIda != null)
             {
-                //this.textBoxOrigen.Text = vueloIda.Origen;
-                //this.textBoxDestino.Text = vueloIda.Destino;
+                this.textBoxOrigen.Text = vueloIda.Origen.Lugar;
+                this.textBoxDestino.Text = vueloIda.Destino.Lugar;
                 this.textBoxFI.Text = vueloIda.Fecha.ToString();
             }
             else

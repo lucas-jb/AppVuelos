@@ -64,6 +64,7 @@
             this.groupBox1.Controls.Add(this.textBoxOrigen);
             this.groupBox1.Controls.Add(this.textBoxDestino);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Location = new System.Drawing.Point(366, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(337, 236);
@@ -154,6 +155,7 @@
             this.groupBox2.Controls.Add(this.textBoxApellido);
             this.groupBox2.Controls.Add(this.textBoxNombre);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox2.Location = new System.Drawing.Point(21, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(323, 236);
@@ -261,12 +263,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(720, 371);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btCompra);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.Info;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComprarBillete";
             this.Text = "Comprar billete";

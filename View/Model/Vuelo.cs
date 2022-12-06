@@ -27,8 +27,8 @@ namespace View.Model
         public string MostrarVuelo()
         {
             return
-                "Origen: " + Origen + Environment.NewLine +
-                "Destino: " + Destino + Environment.NewLine +
+                "Origen: " + Origen.Lugar + Environment.NewLine +
+                "Destino: " + Destino.Lugar + Environment.NewLine +
                 "Fecha: " + Fecha.ToString() + Environment.NewLine;
         }
         private static Aeropuerto RandomAeropuerto()

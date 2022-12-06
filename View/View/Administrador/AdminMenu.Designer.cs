@@ -43,19 +43,21 @@
             // 
             // btnAeropuerto
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(30, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Crear aeropuertos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAeropuerto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAeropuerto.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAeropuerto.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnAeropuerto.Location = new System.Drawing.Point(30, 26);
+            this.btnAeropuerto.Name = "btnAeropuerto";
+            this.btnAeropuerto.Size = new System.Drawing.Size(206, 36);
+            this.btnAeropuerto.TabIndex = 6;
+            this.btnAeropuerto.Text = "Añadir aeropuertos";
+            this.btnAeropuerto.Click += new System.EventHandler(this.btnAeropuerto_Click_1);
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.Info;
             this.button2.Location = new System.Drawing.Point(30, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(206, 35);
@@ -68,6 +70,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.Info;
             this.button3.Location = new System.Drawing.Point(30, 147);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(206, 33);
@@ -79,6 +82,7 @@
             // 
             this.btnVerBilletes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerBilletes.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVerBilletes.ForeColor = System.Drawing.SystemColors.Info;
             this.btnVerBilletes.Location = new System.Drawing.Point(30, 109);
             this.btnVerBilletes.Name = "btnVerBilletes";
             this.btnVerBilletes.Size = new System.Drawing.Size(206, 32);
@@ -91,6 +95,7 @@
             // 
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSalir.Location = new System.Drawing.Point(32, 302);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(206, 35);
@@ -104,6 +109,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnCargar);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Location = new System.Drawing.Point(30, 186);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 97);
@@ -132,6 +138,7 @@
             // 
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.Info;
             this.btnCargar.Location = new System.Drawing.Point(6, 22);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(93, 32);
@@ -143,6 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(271, 369);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);

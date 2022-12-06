@@ -47,7 +47,6 @@ namespace View
             label2.Text = string.Empty;
             comboBoxDestino.Items.Clear();
             this.comboBoxDestino.Items.AddRange(new object[] {
-            "MAMAHUEVOOOOOOO",
             "Cancún",
             "Estambul",
             "Nueva York",
@@ -110,26 +109,26 @@ namespace View
                 if (Message1())
                 {
                     formdatos.ClearDatos();
-                    //MessageBox.Show(datoOrigen + " a "+ datoDestino + Environment.NewLine+ "del " + fechaIda + " al " + fechaVuelta, "Reservado");
+                    MessageBox.Show(datoOrigen + " a " + datoDestino + Environment.NewLine + "del " + fechaIda + " al " + fechaVuelta, "Reservado");
                     if (fechaIda != null)
                     {
-                        //var vueloIda = new Vuelo()
-                        //{
-                        //    Origen = datoOrigen,
-                        //    Destino = datoDestino,
-                        //    Fecha = fechaIda ?? DateTime.Now
-                        //};
-                        //formdatos.vueloIda = vueloIda;
+                        var vueloIda = new Vuelo()
+                        {
+                            Origen = new Aeropuerto() { Lugar = datoOrigen },
+                            Destino = new Aeropuerto() { Lugar = datoDestino },
+                            Fecha = fechaIda ?? DateTime.Now
+                        };
+                        formdatos.vueloIda = vueloIda;
                     }
                     if (fechaVuelta != null)
                     {
-                        //var vueloVuelta = new Vuelo()
-                        //{
-                        //    Origen = datoDestino,
-                        //    Destino = datoOrigen,
-                        //    Fecha = fechaVuelta ?? DateTime.Now
-                        //};
-                        //formdatos.vueloVuelta = vueloVuelta;
+                        var vueloVuelta = new Vuelo()
+                        {
+                            Origen = new Aeropuerto() { Lugar = datoOrigen },
+                            Destino = new Aeropuerto() { Lugar = datoDestino },
+                            Fecha = fechaVuelta ?? DateTime.Now
+                        };
+                        formdatos.vueloVuelta = vueloVuelta;
                     }
                     formdatos.Actualizar();
                     formdatos.CheckearCampos();

@@ -44,6 +44,8 @@
             // btn
             // 
             this.btn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn.ForeColor = System.Drawing.SystemColors.Info;
             this.btn.Location = new System.Drawing.Point(24, 33);
             this.btn.Name = "btn";
@@ -56,8 +58,10 @@
             // btnHistorico
             // 
             this.btnHistorico.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorico.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnHistorico.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnHistorico.Location = new System.Drawing.Point(24, 188);
+            this.btnHistorico.Location = new System.Drawing.Point(24, 199);
             this.btnHistorico.Name = "btnHistorico";
             this.btnHistorico.Size = new System.Drawing.Size(210, 33);
             this.btnHistorico.TabIndex = 1;
@@ -68,8 +72,10 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSalir.Location = new System.Drawing.Point(24, 228);
+            this.btnSalir.Location = new System.Drawing.Point(24, 247);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(210, 34);
             this.btnSalir.TabIndex = 2;
@@ -82,7 +88,8 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.btnVerVuelo);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(26, 71);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox1.Location = new System.Drawing.Point(24, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(210, 110);
             this.groupBox1.TabIndex = 3;
@@ -99,6 +106,8 @@
             // btnVerVuelo
             // 
             this.btnVerVuelo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnVerVuelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerVuelo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnVerVuelo.ForeColor = System.Drawing.SystemColors.Info;
             this.btnVerVuelo.Location = new System.Drawing.Point(22, 33);
             this.btnVerVuelo.Name = "btnVerVuelo";
@@ -112,6 +121,7 @@
             // 
             this.groupBox2.Controls.Add(this.labelDatos);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox2.Location = new System.Drawing.Point(261, 22);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(258, 259);
@@ -131,8 +141,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(531, 263);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(531, 303);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);

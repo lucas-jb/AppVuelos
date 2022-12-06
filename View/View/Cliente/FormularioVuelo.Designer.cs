@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioVuelo));
             this.monthCalendarIda = new System.Windows.Forms.MonthCalendar();
             this.monthCalendarVuelta = new System.Windows.Forms.MonthCalendar();
             this.btComprar = new System.Windows.Forms.Button();
@@ -61,7 +60,9 @@
             // 
             // monthCalendarVuelta
             // 
+            this.monthCalendarVuelta.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.monthCalendarVuelta.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.monthCalendarVuelta.ForeColor = System.Drawing.SystemColors.Info;
             this.monthCalendarVuelta.Location = new System.Drawing.Point(288, 78);
             this.monthCalendarVuelta.MinDate = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
             this.monthCalendarVuelta.Name = "monthCalendarVuelta";
@@ -72,6 +73,7 @@
             // 
             this.btComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btComprar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btComprar.ForeColor = System.Drawing.SystemColors.Info;
             this.btComprar.Location = new System.Drawing.Point(45, 301);
             this.btComprar.Name = "btComprar";
             this.btComprar.Size = new System.Drawing.Size(425, 63);
@@ -82,9 +84,11 @@
             // 
             // comboBoxOrigen
             // 
+            this.comboBoxOrigen.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.comboBoxOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxOrigen.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxOrigen.ForeColor = System.Drawing.SystemColors.Info;
             this.comboBoxOrigen.FormattingEnabled = true;
             this.comboBoxOrigen.Items.AddRange(new object[] {
             "Dubai",
@@ -102,10 +106,12 @@
             // 
             // comboBoxDestino
             // 
+            this.comboBoxDestino.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.comboBoxDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDestino.Enabled = false;
             this.comboBoxDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxDestino.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxDestino.ForeColor = System.Drawing.SystemColors.Info;
             this.comboBoxDestino.FormattingEnabled = true;
             this.comboBoxDestino.Items.AddRange(new object[] {
             "Dubai",
@@ -125,6 +131,7 @@
             // 
             this.btSelectVuelta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSelectVuelta.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btSelectVuelta.ForeColor = System.Drawing.SystemColors.Info;
             this.btSelectVuelta.Location = new System.Drawing.Point(330, 27);
             this.btSelectVuelta.Name = "btSelectVuelta";
             this.btSelectVuelta.Size = new System.Drawing.Size(140, 28);
@@ -136,6 +143,7 @@
             // labelOrigen
             // 
             this.labelOrigen.AutoSize = true;
+            this.labelOrigen.ForeColor = System.Drawing.SystemColors.Info;
             this.labelOrigen.Location = new System.Drawing.Point(54, 10);
             this.labelOrigen.Name = "labelOrigen";
             this.labelOrigen.Size = new System.Drawing.Size(43, 15);
@@ -145,6 +153,7 @@
             // labelDestino
             // 
             this.labelDestino.AutoSize = true;
+            this.labelDestino.ForeColor = System.Drawing.SystemColors.Info;
             this.labelDestino.Location = new System.Drawing.Point(199, 11);
             this.labelDestino.Name = "labelDestino";
             this.labelDestino.Size = new System.Drawing.Size(47, 15);
@@ -155,6 +164,7 @@
             // 
             this.labelVueloOrigen.AutoSize = true;
             this.labelVueloOrigen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelVueloOrigen.ForeColor = System.Drawing.SystemColors.Info;
             this.labelVueloOrigen.Location = new System.Drawing.Point(40, 249);
             this.labelVueloOrigen.Name = "labelVueloOrigen";
             this.labelVueloOrigen.Size = new System.Drawing.Size(171, 14);
@@ -165,6 +175,7 @@
             // 
             this.labelVueloDestino.AutoSize = true;
             this.labelVueloDestino.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelVueloDestino.ForeColor = System.Drawing.SystemColors.Info;
             this.labelVueloDestino.Location = new System.Drawing.Point(40, 264);
             this.labelVueloDestino.Name = "labelVueloDestino";
             this.labelVueloDestino.Size = new System.Drawing.Size(177, 14);
@@ -175,7 +186,8 @@
             // 
             this.labelFechaIda.AutoSize = true;
             this.labelFechaIda.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFechaIda.Location = new System.Drawing.Point(316, 249);
+            this.labelFechaIda.ForeColor = System.Drawing.SystemColors.Info;
+            this.labelFechaIda.Location = new System.Drawing.Point(318, 250);
             this.labelFechaIda.Name = "labelFechaIda";
             this.labelFechaIda.Size = new System.Drawing.Size(103, 14);
             this.labelFechaIda.TabIndex = 10;
@@ -185,6 +197,7 @@
             // 
             this.labelFechaVuelta.AutoSize = true;
             this.labelFechaVuelta.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFechaVuelta.ForeColor = System.Drawing.SystemColors.Info;
             this.labelFechaVuelta.Location = new System.Drawing.Point(300, 264);
             this.labelFechaVuelta.Name = "labelFechaVuelta";
             this.labelFechaVuelta.Size = new System.Drawing.Size(121, 14);
@@ -227,6 +240,7 @@
             // 
             this.labeldatos1.AutoSize = true;
             this.labeldatos1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labeldatos1.ForeColor = System.Drawing.SystemColors.Info;
             this.labeldatos1.Location = new System.Drawing.Point(45, 382);
             this.labeldatos1.Name = "labeldatos1";
             this.labeldatos1.Size = new System.Drawing.Size(183, 14);
@@ -245,6 +259,7 @@
             // 
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSalir.Location = new System.Drawing.Point(428, 562);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 33);
@@ -257,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(515, 607);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.labeldatos2);
@@ -278,7 +293,8 @@
             this.Controls.Add(this.btComprar);
             this.Controls.Add(this.monthCalendarVuelta);
             this.Controls.Add(this.monthCalendarIda);
-            this.Name = "Form1";
+            this.ForeColor = System.Drawing.SystemColors.Info;
+            this.Name = "FormularioVuelo";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

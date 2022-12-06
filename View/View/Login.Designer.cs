@@ -38,6 +38,7 @@
             // 
             // textBoxUser
             // 
+            this.textBoxUser.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxUser.Location = new System.Drawing.Point(12, 28);
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.PlaceholderText = "Usuario";
@@ -46,6 +47,7 @@
             // 
             // textBoxPass
             // 
+            this.textBoxPass.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxPass.Location = new System.Drawing.Point(12, 57);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '*';
@@ -57,6 +59,7 @@
             // 
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.Info;
             this.btnLogin.Location = new System.Drawing.Point(12, 86);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(188, 36);
@@ -85,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(217, 134);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
