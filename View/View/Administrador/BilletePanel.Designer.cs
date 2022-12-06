@@ -45,11 +45,13 @@
             this.comboBoxDestino = new System.Windows.Forms.ComboBox();
             this.dateTimePickerOrigen = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDestino = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -93,7 +95,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSalir.Location = new System.Drawing.Point(448, 469);
+            this.btnSalir.Location = new System.Drawing.Point(623, 469);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(154, 52);
             this.btnSalir.TabIndex = 36;
@@ -106,7 +108,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnDelete.Location = new System.Drawing.Point(448, 95);
+            this.btnDelete.Location = new System.Drawing.Point(623, 104);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(154, 52);
             this.btnDelete.TabIndex = 35;
@@ -119,7 +121,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnEdit.Location = new System.Drawing.Point(448, 34);
+            this.btnEdit.Location = new System.Drawing.Point(623, 43);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(154, 52);
             this.btnEdit.TabIndex = 34;
@@ -166,7 +168,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(568, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 247);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -227,6 +229,7 @@
             this.comboBoxDestino.Name = "comboBoxDestino";
             this.comboBoxDestino.Size = new System.Drawing.Size(255, 23);
             this.comboBoxDestino.TabIndex = 44;
+            this.comboBoxDestino.SelectedIndexChanged += new System.EventHandler(this.comboBoxDestino_SelectedIndexChanged);
             // 
             // dateTimePickerOrigen
             // 
@@ -242,12 +245,23 @@
             this.dateTimePickerDestino.Size = new System.Drawing.Size(255, 23);
             this.dateTimePickerDestino.TabIndex = 46;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(426, 33);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(191, 129);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 47;
+            this.pictureBox5.TabStop = false;
+            // 
             // BilletePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(614, 543);
+            this.ClientSize = new System.Drawing.Size(789, 543);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dateTimePickerDestino);
             this.Controls.Add(this.dateTimePickerOrigen);
             this.Controls.Add(this.comboBoxDestino);
@@ -272,6 +286,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +310,6 @@
         private ComboBox comboBoxDestino;
         private DateTimePicker dateTimePickerOrigen;
         private DateTimePicker dateTimePickerDestino;
+        private PictureBox pictureBox5;
     }
 }

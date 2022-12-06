@@ -46,5 +46,10 @@ namespace ViewAeropuerto.View
                 MessageBox.Show("Datos incorrectos", "Error");
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

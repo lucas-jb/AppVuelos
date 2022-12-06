@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -82,34 +83,13 @@ namespace ViewAeropuerto.View.Administrador
             List<Billete> lista = BilleteContainer.billetes;
             foreach (Billete billete in lista)
             {
-                dataGridView1.Rows.Add(billete.Id.ToString(), billete.Pasajero.Dni, billete.Ida.Origen.Lugar, billete.Vuelta.Origen.Lugar);
+                dataGridView1.Rows.Add(billete.Id.ToString(), billete.Pasajero.Dni, billete.Ida.Origen.Lugar, billete.Ida.Fecha, billete.Vuelta.Origen.Lugar, billete.Vuelta.Fecha);
             }
             //bs.DataSource = typeof(Billete);
             //bs.DataSource = lista;
             //dataGridView1.DataSource = bs;
             //dataGridView1.AutoGenerateColumns = true;
         }
-
-        //private void btnAdd_Click_1(object sender, EventArgs e)
-        //{
-        //    if (!RellenadoCheck())
-        //    {
-        //        MessageBox.Show("Faltan datos", "Cancelado");
-        //    }
-        //    else
-        //    {
-        //        Billete billete = new Billete()
-        //        {
-        //            Nombre = textBoxName.Text,
-        //            Lugar = textBoxLugar.Text,
-        //            Descripcion = textBoxDescription.Text,
-        //        };
-        //        BilleteContainer.billetes.(billete);
-        //        MostrarClientes();
-        //        ClearDatos();
-        //    }
-        //}
-
 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -155,6 +135,22 @@ namespace ViewAeropuerto.View.Administrador
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             celselected = e.RowIndex;
+            try
+            {
+                int index = dataGridView1.SelectedCells[0].RowIndex;
+                comboBoxOrigen.Text = string.Empty;
+                comboBoxDestino.Text = string.Empty;
+                this.comboBoxOrigen.SelectedText = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                this.comboBoxDestino.SelectedText = dataGridView1.Rows[index].Cells[4].Value.ToString();
+                this.dateTimePickerOrigen.Value = DateTime.Parse(dataGridView1.Rows[index].Cells[3].Value.ToString());
+                this.dateTimePickerDestino.Value = DateTime.Parse(dataGridView1.Rows[index].Cells[5].Value.ToString());
+                string? id = dataGridView1.Rows[index].Cells[0].Value.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Hubo un error al seleccionar el billete", "Error");
+            }
+
         }
 
         private void BilletePanel_Load(object sender, EventArgs e)
@@ -162,7 +158,9 @@ namespace ViewAeropuerto.View.Administrador
             dataGridView1.Columns.Add("BilleteId", "Billete Id");
             dataGridView1.Columns.Add("PasajeroId", "Pasajero Id");
             dataGridView1.Columns.Add("Origen", "Origen");
+            dataGridView1.Columns.Add("FechaOrigen", "Fecha Origen");
             dataGridView1.Columns.Add("Destino", "Destino");
+            dataGridView1.Columns.Add("FechaDestino", "Fecha Destino");
             MostrarBilletes();
         }
 
@@ -188,6 +186,11 @@ namespace ViewAeropuerto.View.Administrador
             {
                 MessageBox.Show("No has seleccionado ningun billete", "Cancelado");
             }
+        }
+
+        private void comboBoxDestino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

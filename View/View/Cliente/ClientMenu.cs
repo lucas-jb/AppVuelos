@@ -32,14 +32,18 @@ namespace ViewAeropuerto.View.Cliente
 
         private void btnHistorico_Click(object sender, EventArgs e)
         {
-            this.labelDatos.Text = BilleteContainer.BuscarDniToString(clientDni);
+            this.labelDatos.Text = BilleteContainer.BuscarDniToStringSoloId(clientDni);
+            if(labelDatos.Text == string.Empty && labelDatos.Text != "El usuario no tiene billetes asociados.")
+            {
+                this.labelDatos.Text = "El usuario no tiene billetes asociados.";
+            }
         }
 
         private void btnVerVuelo_Click(object sender, EventArgs e)
         {
             try
             {
-                this.labelDatos.Text = BilleteContainer.BuscarIdToString(Int32.Parse(textBox1.Text));
+                this.labelDatos.Text = BilleteContainer.BuscarDniAndIdToString(user.Dni, Int32.Parse(textBox1.Text));
             }
             catch
             {

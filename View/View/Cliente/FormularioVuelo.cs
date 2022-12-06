@@ -21,6 +21,10 @@ namespace ViewAeropuerto
             formdatos.Hide();
             labeldatos1.Hide();
             this.menu = menu;
+            comboBoxOrigen.Items.Clear();
+            comboBoxDestino.Items.Clear();
+            this.comboBoxOrigen.Items.AddRange(Vuelo.lugares.ToArray());
+            this.comboBoxDestino.Items.AddRange(Vuelo.lugares.ToArray());
         }
 
         private void btSelectVuelta_Click(object sender, EventArgs e)

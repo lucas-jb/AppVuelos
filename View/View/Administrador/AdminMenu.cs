@@ -57,5 +57,25 @@ namespace ViewAeropuerto.View.Administrador
             billetePanel.Show();
             this.Hide();
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBoxFichero.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (textBoxFichero.Text!=string.Empty)
+            {
+                MessageBox.Show("Archivo '" + textBoxFichero.Text + "' guardado con éxito.", "Correcto");
+            }
+            else
+            {
+                MessageBox.Show("Carga un archivo antes de guardar.", "Error");
+            }
+        }
     }
 }

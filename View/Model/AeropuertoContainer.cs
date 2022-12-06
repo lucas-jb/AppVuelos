@@ -9,6 +9,7 @@ namespace ViewAeropuerto.Model
     public static class AeropuertoContainer
     {
         public static List<Aeropuerto> aeropuertos = new();
+        public static int aeropuertosCount = 0;
         public static List<string> lugares = new()
         {
             "Dubái (EAU)",
@@ -24,21 +25,23 @@ namespace ViewAeropuerto.Model
         {
             for (int i = 0; i < 8; i++)
             {
-                aeropuertos.Add(new Aeropuerto()
+                var a = new Aeropuerto()
                 {
                     Id = i,
                     Nombre = "Aeropuerto de "+lugares[i],
                     Lugar = lugares[i],
                     Descripcion = "Descripción"+i
-                });
+                };
+                AddAeropuerto(a);
             }
         }
         public static void AddAeropuerto(Aeropuerto aeropuerto)
         {
             if (aeropuerto != null)
             {
-                aeropuerto.Id = aeropuertos.Count;
+                aeropuerto.Id = aeropuertosCount;
                 aeropuertos.Add(aeropuerto);
+                aeropuertosCount++;
             }
         }
     }

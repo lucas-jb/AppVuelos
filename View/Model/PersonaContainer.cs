@@ -14,7 +14,7 @@ namespace ViewAeropuerto.Model
         {
             for (int i = 0; i < 8; i++)
             {
-                personas.Add(new Persona()
+                var a = (new Persona()
                 {
                     Nombre = "Nombre"+i,
                     Apellidos = "Apellidos"+i,
@@ -22,15 +22,16 @@ namespace ViewAeropuerto.Model
                     Dni = "dni"+i,
                     Pass = generador_pass(8)
                 });
+                AddPersona(a);
 
-                BilleteContainer.
-                billetes.Add(new Billete()
+                var b = (new Billete()
                 {
                     Id = i,
                     Pasajero = personas[i],
                     Ida = Vuelo.RandomVuelo(i, true),
                     Vuelta = Vuelo.RandomVuelo(i, false)
                 });
+                BilleteContainer.AddBillete(b);
 
             }
             personas.Add(new Persona()

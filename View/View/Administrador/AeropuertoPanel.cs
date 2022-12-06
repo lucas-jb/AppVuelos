@@ -91,7 +91,6 @@ namespace ViewAeropuerto.View.Administrador
                     Descripcion = textBoxDescription.Text,
                 };
                 AeropuertoContainer.AddAeropuerto(aeropuerto);
-                AeropuertoContainer.aeropuertos.Add(aeropuerto);
                 MostrarAeropuertos();
                 ClearDatos();
             }

@@ -9,6 +9,7 @@ namespace ViewAeropuerto.Model
     public static class BilleteContainer
     {
         public static List<Billete> billetes = new();
+        public static int billeteCount = 0;
 
         public static bool Exists(int id)
         {
@@ -66,13 +67,42 @@ namespace ViewAeropuerto.Model
             }
             return text;
         }
-
+        public static string BuscarDniToStringSoloId(string dni)
+        {
+            List<Billete> billetes = BuscarDni(dni);
+            string text = string.Empty;
+            if (billetes != null)
+            {
+                foreach (Billete billete in billetes)
+                {
+                    text = text + "Id del billete: " + billete.Id + Environment.NewLine;
+                }
+            }
+            return text;
+        }
+        public static string BuscarDniAndIdToString(string dni, int id)
+        {
+            List<Billete> billetes = BuscarDni(dni);
+            string text = string.Empty;
+            if (billetes != null)
+            {
+                foreach (Billete billete in billetes)
+                {
+                    if(billete.Id == id)
+                    {
+                        return billete.MostrarBillete();
+                    }
+                }
+            }
+            return "No existe el billete.";
+        }
         public static void AddBillete(Billete billete)
         {
             if (billete != null)
             {
-                billete.Id = billetes.Count;
+                billete.Id = billeteCount;
                 billetes.Add(billete);
+                billeteCount++;
             }
         }
         public static bool DeleteBillete(int id)

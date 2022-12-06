@@ -35,9 +35,10 @@
             this.btnVerBilletes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFichero = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,7 +108,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxFichero);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnCargar);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
@@ -117,12 +118,13 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
+            // textBoxFichero
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 23);
-            this.textBox1.TabIndex = 2;
+            this.textBoxFichero.Location = new System.Drawing.Point(6, 60);
+            this.textBoxFichero.Name = "textBoxFichero";
+            this.textBoxFichero.ReadOnly = true;
+            this.textBoxFichero.Size = new System.Drawing.Size(196, 23);
+            this.textBoxFichero.TabIndex = 2;
             // 
             // btnGuardar
             // 
@@ -134,6 +136,7 @@
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar fichero";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCargar
             // 
@@ -146,6 +149,12 @@
             this.btnCargar.TabIndex = 0;
             this.btnCargar.Text = "Cargar fichero";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "*.txt | *.doc";
             // 
             // AdminMenu
             // 
@@ -176,8 +185,9 @@
         private Button btnVerBilletes;
         private Button btnSalir;
         private GroupBox groupBox1;
-        private TextBox textBox1;
+        private TextBox textBoxFichero;
         private Button btnGuardar;
         private Button btnCargar;
+        private OpenFileDialog openFileDialog1;
     }
 }
